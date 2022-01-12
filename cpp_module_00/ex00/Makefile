@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/01/12 17:05:16 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/01/12 17:12:15 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ RM			=	rm -rf
 all :		$(NAME)
 
 $(NAME) :	$(OBJ)
-			$(CC) $(CPPFLAG) $(OBJ) -o $@
+			$(CPPC) $(CPPFLAG) $(OBJ) -o $@
 
 re :		fclean all
 
@@ -51,7 +51,7 @@ re :		fclean all
 
 $(PATH_OBJ)%.o :	%.cpp
 					@mkdir -p $(PATH_OBJ)
-					$(CC) $(CPPFLAG) -c $< -o $@
+					$(CPPC) $(CPPFLAG) -c $< -o $@
 
 #~~~~ Cleaning Rules ~~~~#
 
