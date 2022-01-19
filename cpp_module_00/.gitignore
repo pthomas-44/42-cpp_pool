@@ -2,6 +2,8 @@
 .vscode
 megaphone
 phonebook
+accounts_system_test
+*.log
 
 # Prerequisites
 *.d
