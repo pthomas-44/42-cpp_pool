@@ -6,13 +6,13 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 20:50:31 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/19 04:29:01 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 14:34:46 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-void	ShowUsage(void) {
+void	ShowUsage( void ) {
 
 	std::cout << "Commands list:" << std::endl;
 	std::cout << "[ADD]: add a contact to phonebook" << std::endl;
@@ -22,51 +22,51 @@ void	ShowUsage(void) {
 	return;
 }
 
-void	GetContact(Contact *newContact) {
+void	GetContact( Contact *newContact ) {
 
 	std::cout << std::endl << "Please input new contact informations" << std::endl;
 	std::cout << "First name: ";
-	std::getline (std::cin, newContact->firstName);
+	std::getline ( std::cin, newContact->firstName );
 	std::cout << "Last name: ";
-	std::getline (std::cin, newContact->lastName);
+	std::getline ( std::cin, newContact->lastName );
 	std::cout << "Nickname: ";
-	std::getline (std::cin, newContact->nickname);
+	std::getline ( std::cin, newContact->nickname );
 	std::cout << "Phone number: ";
-	std::getline (std::cin, newContact->phoneNumber);
+	std::getline ( std::cin, newContact->phoneNumber );
 	std::cout << "Darkest secret: ";
-	std::getline (std::cin, newContact->darkestSecret);
+	std::getline ( std::cin, newContact->darkestSecret );
 	std::cout << "Contact added to phonebook" << std::endl << std::endl;
 	return;
 }
 
-static	void PrintStandarizedInfo(std::string info) {
+static	void PrintStandarizedInfo( std::string info ) {
 
 	std::string		standarizedInfo;
 
-	if (info.size() > 10)
-		standarizedInfo = info.substr(0, 9) + ".";
+	if ( info.size() > 10 )
+		standarizedInfo = info.substr( 0, 9 ) + ".";
 	else {
 
-		standarizedInfo.assign(info);
-		while (standarizedInfo.size() < 10)
-			standarizedInfo.insert(0, " ");
+		standarizedInfo.assign( info );
+		while ( standarizedInfo.size() < 10 )
+			standarizedInfo.insert( 0, " " );
 	}
 	std::cout << standarizedInfo << "|";
 	return;
 }
 
-void	PrintPhonebook(Contact phonebook[8]) {
+void	PrintPhonebook( Contact phonebook[8] ) {
 
 	size_t	i = 1;
 
 	std::cout << std::endl;
-	while (i <= Contact::nbContacts) {
+	while ( i <= Contact::nbContacts ) {
 
 		std::cout << "|──────────|──────────|──────────|──────────|" << std::endl;
 		std::cout << "|         " << i << "|";
-		PrintStandarizedInfo(phonebook[i - 1].firstName);
-		PrintStandarizedInfo(phonebook[i - 1].lastName);
-		PrintStandarizedInfo(phonebook[i - 1].nickname);
+		PrintStandarizedInfo( phonebook[i - 1].firstName );
+		PrintStandarizedInfo( phonebook[i - 1].lastName );
+		PrintStandarizedInfo( phonebook[i - 1].nickname );
 		std::cout << std::endl;
 		i++;
 	}
@@ -74,7 +74,7 @@ void	PrintPhonebook(Contact phonebook[8]) {
 	return;
 }
 
-void	PrintContact(Contact contact) {
+void	PrintContact( Contact contact ) {
 
 	std::cout << "First name: " << contact.firstName << std::endl;
 	std::cout << "Last name: " << contact.lastName << std::endl;

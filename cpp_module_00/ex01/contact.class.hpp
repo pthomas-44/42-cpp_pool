@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/18 23:13:00 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 14:12:00 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class Contact {
 
 	public:
 
-		Contact(void);
-		~Contact(void);
+		Contact( void );
+		~Contact( void );
 
 		std::string		firstName;
 		std::string		lastName;
