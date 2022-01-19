@@ -6,14 +6,14 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:27:23 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/18 13:47:26 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 14:33:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cctype>
 #include <iostream>
 
-void	convert_str_to_uppercase(char *str)
+void	convert_str_to_uppercase( char *str )
 {
 	size_t	i;
 
@@ -25,7 +25,7 @@ void	convert_str_to_uppercase(char *str)
 	}
 }
 
-int	main(int argc, char **argv)
+int	main( int argc, char **argv )
 {
 	int	i;
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			convert_str_to_uppercase(argv[i]);
+			convert_str_to_uppercase( argv[i] );
 			std::cout << argv[i];
 			i++;
 		}
