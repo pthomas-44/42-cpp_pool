@@ -6,23 +6,36 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:28 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/19 14:36:05 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 16:04:04 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include <iostream>
+#include "contact.class.hpp"
 
-static void	AddContact( Contact phonebook[8] ) {
+static void		ShowUsage( void ) {
+
+	std::cout << "Commands list:" << std::endl;
+	std::cout << "[ADD]: add a contact to phonebook" << std::endl;
+	std::cout << "[SEARCH]: search a contact in phonebook" << std::endl;
+	std::cout << "[EXIT]: exit phonebook (delete all contacts)" << std::endl;
+	std::cout << "Please input command: ";
+	return;
+}
+
+
+static void		AddContact( Contact phonebook[8] ) {
 
 	Contact		*newContact;
 	std::string	input;
 
 	if ( Contact::nbContacts == 8 ) {
-		PrintPhonebook( phonebook );
+
+		Contact::PrintPhonebook( phonebook );
 		std::cout << "Too many contact, input contact index to overwrite (or 0 to cancel): ";
 		std::getline( std::cin, input );
-		if ( input.size() != 1 || input.at(0) < '1' || input.at(0) > '9' )
-		{
+		if ( input.size() != 1 || input.at(0) < '1' || input.at(0) > Contact::nbContacts || input.at(0) > '9' ) {
+
 			std::cout << "No contact with this index" << std::endl << std::endl;
 			return;
 		}
@@ -33,11 +46,11 @@ static void	AddContact( Contact phonebook[8] ) {
 		newContact = &phonebook[Contact::nbContacts];
 		Contact::nbContacts += 1;
 	}
-	GetContact( newContact );
+	Contact::GetContactInfo( newContact );
 	return;
 }
 
-static void	SearchContact( Contact phonebook[8] ) {
+static void		SearchContact( Contact phonebook[8] ) {
 
 	std::string	input;
 
@@ -46,13 +59,13 @@ static void	SearchContact( Contact phonebook[8] ) {
 		std::cout << std::endl << "Phonebook empty" << std::endl << std::endl;
 		return;
 	}
-	PrintPhonebook( phonebook );
+	Contact::PrintPhonebook( phonebook );
 	std::cout << "Please input contact index: ";
 	std::getline( std::cin, input );
 	if ( input.size() != 1 || input.at(0) < '1' || input.at(0) > '9' )
 		std::cout << "No contact with this index" << std::endl << std::endl;
 	else
-		PrintContact( phonebook[input.at(0) - '0' - 1] );
+		Contact::PrintContact( phonebook[input.at(0) - '0' - 1] );
 	return;
 }
 
