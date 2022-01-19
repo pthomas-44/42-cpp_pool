@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 20:50:31 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/18 23:54:34 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 04:29:01 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ShowUsage(void) {
 
+	std::cout << "Commands list:" << std::endl;
 	std::cout << "[ADD]: add a contact to phonebook" << std::endl;
 	std::cout << "[SEARCH]: search a contact in phonebook" << std::endl;
 	std::cout << "[EXIT]: exit phonebook (delete all contacts)" << std::endl;
@@ -34,7 +35,8 @@ void	GetContact(Contact *newContact) {
 	std::getline (std::cin, newContact->phoneNumber);
 	std::cout << "Darkest secret: ";
 	std::getline (std::cin, newContact->darkestSecret);
-	std::cout << "New contact added to phonebook" << std::endl << std::endl;
+	std::cout << "Contact added to phonebook" << std::endl << std::endl;
+	return;
 }
 
 static	void PrintStandarizedInfo(std::string info) {
@@ -79,4 +81,5 @@ void	PrintContact(Contact contact) {
 	std::cout << "Nickname: " << contact.nickname << std::endl;
 	std::cout << "Phone number: " << contact.phoneNumber << std::endl;
 	std::cout << "Darkest secret: " << contact.darkestSecret << std::endl << std::endl;
+	return;
 }

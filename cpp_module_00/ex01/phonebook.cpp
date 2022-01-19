@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:28 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/19 01:42:42 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/19 04:28:16 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static void	AddContact(Contact phonebook[8]) {
 static void	SearchContact(Contact phonebook[8]) {
 
 	std::string	input;
-	
+
 	if (Contact::nbContacts == 0) {
 
 		std::cout << std::endl << "Phonebook empty" << std::endl << std::endl;
@@ -58,7 +58,7 @@ static void	SearchContact(Contact phonebook[8]) {
 
 int		main(void) {
 
-	Contact	phonebook[8];
+	Contact		phonebook[8];
 	std::string	input;
 
 	do {
