@@ -6,53 +6,54 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:58:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/21 18:37:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 19:44:46 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <iomanip>
 #include <ctime>
 
-int		Account::_nbAccounts = 0;
-int		Account::_totalAmount = 0;
-int		Account::_totalNbDeposits = 0;
-int		Account::_totalNbWithdrawals = 0;
+int		Account::t::_nbAccounts = 0;
+int		Account::t::_totalAmount = 0;
+int		Account::t::_totalNbDeposits = 0;
+int		Account::t::_totalNbWithdrawals = 0;
 
-int	    Account::getNbAccounts( void ) {
+int	    Account::t::getNbAccounts( void ) {
 
-	return (t::_nbAccounts);
+	return ( _nbAccounts );
 }
 
-int	    Account::getTotalAmount( void ) {
+int	    Account::t::getTotalAmount( void ) {
 
-	return (t::_totalAmount);
+	return ( _totalAmount );
 }
 
-int	    Account::getNbDeposits( void ) {
+int	    Account::t::getNbDeposits( void ) {
 
-	return (t::_totalNbDeposits);
+	return ( _totalNbDeposits );
 }
 
-int	    Account::getNbWithdrawals( void ) {
+int	    Account::t::getNbWithdrawals( void ) {
 
-	return (t::_totalNbWithdrawals);
+	return ( _totalNbWithdrawals );
 }
 
-void	Account::displayAccountsInfos( void ) {
+void	Account::t::displayAccountsInfos( void ) {
 
 	_displayTimestamp();
-	std::cout << "accounts:" << t::_nbAccounts << ";";
-	std::cout << "total:" << t::_totalAmount << ";";
-	std::cout << "deposits:" << t::_totalNbDeposits << ";";
-	std::cout << "withdrawals:" << t::_totalNbWithdrawals << std::endl;
+	std::cout << "accounts:" << _nbAccounts << ";";
+	std::cout << "total:" << _totalAmount << ";";
+	std::cout << "deposits:" << _totalNbDeposits << ";";
+	std::cout << "withdrawals:" << _totalNbWithdrawals << std::endl;
 	return;
 }
 
-Account::Account( int initial_deposit ) : \
-					_accountIndex(_nbAccounts), \
-					_amount(initial_deposit), \
-					_nbDeposits(0), _nbWithdrawals(0) {
+Account::t::Account( int initial_deposit ) : \
+					_accountIndex( _nbAccounts ), \
+					_amount( initial_deposit ), \
+					_nbDeposits( 0 ), _nbWithdrawals( 0 ) {
 
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -63,7 +64,7 @@ Account::Account( int initial_deposit ) : \
 	return;
 }
 
-Account::~Account( void ) {
+Account::t::~Account( void ) {
 
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -76,7 +77,7 @@ Account::~Account( void ) {
 	return;
 }
 
-void	Account::makeDeposit( int deposit ) {
+void	Account::t::makeDeposit( int deposit ) {
 
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -91,12 +92,12 @@ void	Account::makeDeposit( int deposit ) {
 	return;
 }
 
-bool	Account::makeWithdrawal( int withdrawal ) {
+bool	Account::t::makeWithdrawal( int withdrawal ) {
 
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
 	std::cout << "p_amount:" << _amount << ";";
-	if ( withdrawal > _amount) {
+	if ( withdrawal > _amount ) {
 
 		std::cout << "withdrawal:refused" << std::endl;
 		return ( false );
@@ -111,12 +112,12 @@ bool	Account::makeWithdrawal( int withdrawal ) {
 	return ( true );
 }
 
-int		Account::checkAmount( void ) const {
+int		Account::t::checkAmount( void ) const {
 
 	return ( _amount );
 }
 
-void	Account::displayStatus( void ) const {
+void	Account::t::displayStatus( void ) const {
 
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";
@@ -126,7 +127,7 @@ void	Account::displayStatus( void ) const {
 	return;
 }
 
-void	Account::_displayTimestamp( void ) {
+void	Account::t::_displayTimestamp( void ) {
 	
 	time_t		currentTime = 0;
 	struct tm	*timeStruct;
@@ -135,29 +136,15 @@ void	Account::_displayTimestamp( void ) {
 	timeStruct = localtime( &currentTime );
 	timeStruct->tm_year += 1900;
 	timeStruct->tm_mon += 1;
+	std::cout << std::setfill ('0');
 	std::cout << "[";
 	std::cout << timeStruct->tm_year;
-	if ( timeStruct->tm_mon > 9 )
-		std::cout << timeStruct->tm_mon;
-	else
-		std::cout << "0" << timeStruct->tm_mon;
-	if ( timeStruct->tm_mday > 9 )
-		std::cout << timeStruct->tm_mday;
-	else
-		std::cout << "0" << timeStruct->tm_mday;
+	std::cout << std::setw (2) << timeStruct->tm_mon;
+	std::cout << std::setw (2) << timeStruct->tm_mday;
 	std::cout << "_";
-	if ( timeStruct->tm_hour > 9 )
-		std::cout << timeStruct->tm_hour;
-	else
-		std::cout << "0" << timeStruct->tm_hour;
-	if ( timeStruct->tm_min > 9 )
-		std::cout << timeStruct->tm_min;
-	else
-		std::cout << "0" << timeStruct->tm_min;
-	if ( timeStruct->tm_sec > 9 )
-		std::cout << timeStruct->tm_sec;
-	else
-		std::cout << "0" << timeStruct->tm_sec;
+	std::cout << std::setw (2) << timeStruct->tm_hour;
+	std::cout << std::setw (2) << timeStruct->tm_min;
+	std::cout << std::setw (2) << timeStruct->tm_sec;
 	std::cout << "] ";
 	return;
 }

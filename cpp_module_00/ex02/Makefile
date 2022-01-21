@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/01/21 18:45:05 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/01/21 19:45:09 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,8 +61,8 @@ $(PATH_OBJ)%.o :	%.cpp $(INC)
 clean :
 			$(RM) $(PATH_OBJ)
 
-fclean :		
-			$(RM) $(PATH_OBJ) $(NAME)
+fclean :
+			$(RM) $(PATH_OBJ) $(NAME) test.log
 
 #~~~~ Eugene ~~~~#
 
