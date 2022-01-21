@@ -6,11 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:27:23 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/19 15:49:46 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 18:52:10 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cctype>
+#include <cstdlib>
 #include <iostream>
 
 void	convert_str_to_uppercase( char *str ) {
@@ -40,5 +40,5 @@ int	main( int ac, char **av ) {
 		}
 	}
 	std::cout << std::endl;
-	return (EXIT_SUCCESS);
+	return ( EXIT_SUCCESS );
 }

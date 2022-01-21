@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/01/19 15:59:38 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/01/21 18:45:05 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,16 +25,16 @@ PATH_OBJ	=	obj/
 #~~~~ Files ~~~~#
 
 SRC			=	phonebook.cpp		\
-				contact.class.cpp
+				Contact.cpp
 
-INC			=	contact.class.hpp
+INC			=	Contact.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
 #~~~~ Compiler ~~~~#
 
-CPPC		=	g++
-CPPFLAG		=	-Wall -Wextra -Werror
+CPPC		=	clang++
+CPPFLAG		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 #========================================#

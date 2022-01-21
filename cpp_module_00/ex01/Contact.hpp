@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.class.hpp                                  :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/19 16:00:43 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/21 18:53:10 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef CONTACT_H
+# define CONTACT_H
 
+# include <cstdlib>
 # include <string>
 
 class Contact {
 
 	public:
 
+		Contact( void );
+		~Contact( void );
+		
+		void			setContactInfo( void );
+		void			printContactInfo( void );
+		
+		static size_t	nbContacts;
+
+		static void		printPhonebook( Contact phonebook[8] );
+
+	private:
+
 		std::string		firstName;
 		std::string		lastName;
 		std::string		nickname;
 		std::string		phoneNumber;
 		std::string		darkestSecret;
-		
-		Contact( void );
-		~Contact( void );
-		
-		static size_t	nbContacts;
 
-		static void		GetContactInfo( Contact *newContact );
-		static void		PrintPhonebook( Contact phonebook[8] );
-		static void		PrintContact( Contact contact );
-
-	private:
-
-		static void		PrintStandarizedInfo( std::string info );
+		static void		printStandarizedInfo( std::string info );
 
 };
 
