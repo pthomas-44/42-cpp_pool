@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:04:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 16:36:53 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 16:56:04 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Zombie::Zombie( std::string name ) : name(name) {
 
-	std::cout << "<" << this->name << "> " << "* Emerge from the abyss *" << std::endl;
+	// std::cout << "<" << this->name << "> " << "* Emerges from the abyss *" << std::endl;
 	return;
 }
  
