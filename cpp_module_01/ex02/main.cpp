@@ -6,11 +6,10 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:04:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 17:31:43 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:12:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
 #include <iostream>
 #include <string>
 
