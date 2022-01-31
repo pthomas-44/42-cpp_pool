@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:27:23 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/21 18:52:10 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 13:08:52 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	convert_str_to_uppercase( char *str ) {
 
 	while ( str[i] ) {
 
-		str[i] = toupper(str[i]);
+		str[i] = std::toupper( str[i] );
 		i++;
 	}
 }

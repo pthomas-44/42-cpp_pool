@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/21 19:30:51 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 13:33:24 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,8 @@ class Contact {
 		
 		void			setContactInfo( void );
 		void			printContactInfo( void );
+		void			printSummerizedContactInfo( void );
 		
-		static size_t	nbContacts;
-
-		static void		printPhonebook( Contact phonebook[8] );
-
 	private:
 
 		std::string		firstName;
@@ -36,7 +33,7 @@ class Contact {
 		std::string		nickname;
 		std::string		phoneNumber;
 		std::string		darkestSecret;
-
+		
 		static void		printStandarizedInfo( std::string info );
 
 };
