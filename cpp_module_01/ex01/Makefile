@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/01/31 17:11:55 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/01/31 17:24:17 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ PATH_OBJ	=	obj/
 
 SRC			=	main.cpp		\
 				Zombie.cpp		\
-				ZombieHorde.cpp	\
+				ZombieHorde.cpp
 
 INC			=	Zombie.hpp
 
@@ -34,8 +34,8 @@ OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
 #~~~~ Compiler ~~~~#
 
-CPPC		=	g++
-CPPFLAG		=	-Wall -Wextra -Werror
+CPPC		=	clang++
+CPPFLAG		=	-Wall -Wextra -Werror -std=c++98
 RM			=	rm -rf
 
 #========================================#
