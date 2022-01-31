@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:28 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 13:38:52 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 15:17:06 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,12 @@ int		main( void ) {
 
 		showUsage();
 		std::getline( std::cin, input );
-		if ( !input.compare( "ADD" ) )
+		if ( std::cin.eof() )
+			return ( EXIT_SUCCESS );
+		else if ( !input.compare( "ADD" ) )
 			phonebook.addContact();
 		else if ( !input.compare( "SEARCH" ) )
 			phonebook.searchContact();
-	} while ( std::cin && input.compare( "EXIT" ) );
+	} while ( !std::cin.eof() && input.compare( "EXIT" ) );
 	return ( EXIT_SUCCESS );
 }

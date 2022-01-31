@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 13:33:24 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 14:57:47 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ class Contact {
 		
 	private:
 
-		std::string		firstName;
-		std::string		lastName;
-		std::string		nickname;
-		std::string		phoneNumber;
-		std::string		darkestSecret;
+		std::string		_firstName;
+		std::string		_lastName;
+		std::string		_nickname;
+		std::string		_phoneNumber;
+		std::string		_darkestSecret;
 		
-		static void		printStandarizedInfo( std::string info );
+		static void		_printStandarizedInfo( std::string info );
 
 };
 
