@@ -6,11 +6,10 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 16:09:04 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:12:28 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
 #include <iostream>
 #include <iomanip>
 #include "Contact.hpp"

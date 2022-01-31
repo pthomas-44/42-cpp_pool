@@ -6,11 +6,10 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 15:27:23 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 13:08:52 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 18:12:29 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <cstdlib>
 #include <iostream>
 
 void	convert_str_to_uppercase( char *str ) {
