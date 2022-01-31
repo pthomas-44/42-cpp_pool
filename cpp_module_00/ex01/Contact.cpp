@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 15:36:31 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 16:09:04 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void		Contact::setContactInfo( void ) {
 	return;
 }
 
-void		Contact::printContactInfo( void ) {
+void		Contact::printContactInfo( void ) const {
 
 	std::cout << "First name: " << this->_firstName << std::endl;
 	std::cout << "Last name: " << this->_lastName << std::endl;
@@ -62,21 +62,19 @@ void		Contact::printContactInfo( void ) {
 	return;
 }
 
-void		Contact::printSummerizedContactInfo( void ) {
+void		Contact::printSummerizedContactInfo( void ) const {
 
-	_printStandarizedInfo( this->_firstName );
-	_printStandarizedInfo( this->_lastName );
-	_printStandarizedInfo( this->_nickname );
-	return;
-}
-
-void		Contact::_printStandarizedInfo( std::string info ) {
-
-	std::string		standarizedInfo;
-
-	if ( info.size() > 10 )
-		std::cout << info.substr( 0, 9 ) + "." << "|";
+	if ( this->_firstName.size() > 10 )
+		std::cout << this->_firstName.substr( 0, 9 ) + "." << "|";
 	else
-		std::cout << std::setw(10) << info << "|";
+		std::cout << std::setw(10) << this->_firstName << "|";
+	if ( this->_lastName.size() > 10 )
+		std::cout << this->_lastName.substr( 0, 9 ) + "." << "|";
+	else
+		std::cout << std::setw(10) << this->_lastName << "|";
+	if ( this->_nickname.size() > 10 )
+		std::cout << this->_nickname.substr( 0, 9 ) + "." << "|";
+	else
+		std::cout << std::setw(10) << this->_nickname << "|";
 	return;
 }

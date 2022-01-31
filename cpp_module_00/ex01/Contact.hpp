@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 14:57:47 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 16:08:09 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Contact {
 		~Contact( void );
 		
 		void			setContactInfo( void );
-		void			printContactInfo( void );
-		void			printSummerizedContactInfo( void );
+		void			printContactInfo( void ) const ;
+		void			printSummerizedContactInfo( void ) const ;
 		
 	private:
 
@@ -34,8 +34,6 @@ class Contact {
 		std::string		_phoneNumber;
 		std::string		_darkestSecret;
 		
-		static void		_printStandarizedInfo( std::string info );
-
 };
 
 #endif

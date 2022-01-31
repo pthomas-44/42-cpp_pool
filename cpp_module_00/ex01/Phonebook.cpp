@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:11:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 15:36:31 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 16:07:44 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void		Phonebook::searchContact( void ) {
 	return;
 }
 
-void		Phonebook::_printPhonebook( void ) {
+void		Phonebook::_printPhonebook( void ) const {
 
 	size_t	i = 1;
 
