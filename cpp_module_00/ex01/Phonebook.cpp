@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:11:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 15:16:42 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 15:36:31 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void		Phonebook::addContact( void ) {
 		this->_printPhonebook();
 		std::cout << "Too many contact, input contact index to overwrite (or 0 to cancel): ";
 		std::getline( std::cin, input );
-	    if ( std::cin.eof() )
+	    if ( !std::cin.good() )
 	    	return;
 		else if ( input.size() != 1 || input.at(0) < '1' || input.at(0) > '8' ) {
 
@@ -63,7 +63,7 @@ void		Phonebook::searchContact( void ) {
 	this->_printPhonebook();
 	std::cout << "Please input contact index: ";
 	std::getline( std::cin, input );
-	if ( std::cin.eof() )
+	if ( !std::cin.good() )
 		return;
 	if ( input.size() != 1 || input.at( 0 ) < '1' \
 		|| input.at( 0 ) > ( char )( this->_nbContacts + '0' ))
