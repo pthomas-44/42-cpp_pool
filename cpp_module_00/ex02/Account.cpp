@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:58:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 15:20:37 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 20:58:08 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 #include <iomanip>
 #include <ctime>
 
-int		_nbAccounts = 0;
-int		_totalAmount = 0;
-int		_totalNbDeposits = 0;
-int		_totalNbWithdrawals = 0;
+int		Account::_nbAccounts = 0;
+int		Account::_totalAmount = 0;
+int		Account::_totalNbDeposits = 0;
+int		Account::_totalNbWithdrawals = 0;
 
 int		Account::getNbAccounts( void ) {
 
