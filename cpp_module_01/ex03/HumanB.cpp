@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:53:09 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 18:15:14 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/03 16:56:45 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void				HumanB::attack( void ) const {
 	return;
 }
 
-void				HumanB::setWeapon( Weapon weapon ) {
+void				HumanB::setWeapon( Weapon &weapon ) {
 
 	this->_weapon = &weapon;
 	return;
