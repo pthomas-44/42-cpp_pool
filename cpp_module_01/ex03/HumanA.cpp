@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/19 17:04:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/03 16:42:23 by pthomas          ###   ########lyon.fr   */
+/*   Created: 2022/01/31 17:43:21 by pthomas           #+#    #+#             */
+/*   Updated: 2022/01/31 18:14:01 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "HumanA.hpp"
 #include <iostream>
-#include "Zombie.hpp"
 
-Zombie::Zombie( std::string name ) : name(name) {
+HumanA::HumanA( std::string name, Weapon &weapon ) : _name(name), _weapon(weapon) {
 
-	std::cout << "<" << this->name << "> " << "* Emerges from the abyss *" << std::endl;
-	return;
-}
- 
-Zombie::~Zombie( void ) {
-
-	std::cout << "<" << this->name << "> " << "* Burnt to ashes *" << std::endl;
 	return;
 }
 
-void	Zombie::announce( void ) const {
+HumanA::~HumanA( void ) {
 
-	std::cout << "<" << this->name << "> " << "BraiiiiiiinnnzzzZ..." << std::endl;
 	return;
+}
+
+void				HumanA::attack( void ) const {
+
+    std::cout << this->_name << " attacks with his " << this->_weapon.getType() << std::endl;
+    return;
 }

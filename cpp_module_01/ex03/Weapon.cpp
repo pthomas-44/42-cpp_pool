@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/19 17:04:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/03 16:42:23 by pthomas          ###   ########lyon.fr   */
+/*   Created: 2022/01/31 17:32:48 by pthomas           #+#    #+#             */
+/*   Updated: 2022/01/31 18:18:15 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie( std::string name ) : name(name) {
+Weapon::Weapon( std::string type ) : _type(type) {
 
-	std::cout << "<" << this->name << "> " << "* Emerges from the abyss *" << std::endl;
-	return;
-}
- 
-Zombie::~Zombie( void ) {
-
-	std::cout << "<" << this->name << "> " << "* Burnt to ashes *" << std::endl;
 	return;
 }
 
-void	Zombie::announce( void ) const {
+Weapon::~Weapon( void ) {
 
-	std::cout << "<" << this->name << "> " << "BraiiiiiiinnnzzzZ..." << std::endl;
+	return;
+}
+
+std::string		Weapon::getType( void ) const {
+
+
+	return ( this->_type );
+}
+
+
+void			Weapon::setType( std::string type ) {
+
+	this->_type = type;
 	return;
 }
