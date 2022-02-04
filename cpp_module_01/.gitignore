@@ -8,7 +8,6 @@ replace
 *.replace
 karen
 karenFilter
-cpp_module_01/ex05/*
 
 
 # Prerequisites
