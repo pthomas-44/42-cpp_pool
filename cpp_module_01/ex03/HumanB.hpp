@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:54:16 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/03 16:56:16 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:37:25 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class	HumanB
 
 		void    attack( void ) const;
 		void    setWeapon( Weapon &weapon );
-
 };
 
 #endif

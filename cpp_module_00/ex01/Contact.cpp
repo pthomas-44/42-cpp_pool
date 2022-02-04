@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 18:12:28 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:28:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 #include <iomanip>
 #include "Contact.hpp"
 
-Contact::Contact( void ) {
-
+Contact::Contact( void )
+{
 	return;
 }
 
-Contact::~Contact( void ) {
-
+Contact::~Contact( void )
+{
 	return;
 }
 
-void		Contact::setContactInfo( void ) {
-
+void		Contact::setContactInfo( void )
+{
 	std::cout << std::endl << "Please input new contact informations" << std::endl;
 	std::cout << "First name: ";
 	std::getline ( std::cin, this->_firstName );

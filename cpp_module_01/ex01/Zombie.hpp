@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:04:38 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 18:12:47 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:36:49 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 #include <string>
 
-class Zombie {
-
+class Zombie
+{
 	public:
 
 		Zombie( void );
@@ -28,7 +28,6 @@ class Zombie {
 	private:
 
 		std::string  name;
-
 };
 
 #endif

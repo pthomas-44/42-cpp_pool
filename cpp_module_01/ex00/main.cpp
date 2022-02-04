@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:04:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 16:37:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:28:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 Zombie*	newZombie( std::string name );
 void	randomChump( std::string name );
 
-int		main( void ) {
-
+int		main( void )
+{
 	Zombie	*Zombie1;
 
 	Zombie1 = newZombie( "Bob" );

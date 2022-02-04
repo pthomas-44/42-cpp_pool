@@ -6,15 +6,15 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:28 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 18:12:33 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:32:38 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Phonebook.hpp"
 
-static void		showUsage( void ) {
-
+static void		showUsage( void )
+{
 	std::cout << "Commands list:" << std::endl;
 	std::cout << "[ADD]: add a contact to phonebook" << std::endl;
 	std::cout << "[SEARCH]: search a contact in phonebook" << std::endl;
@@ -23,13 +23,13 @@ static void		showUsage( void ) {
 	return;
 }
 
-int		main( void ) {
-
+int		main( void )
+{
 	Phonebook	phonebook;
 	std::string	input;
 
-	do {
-
+	do
+	{
 		showUsage();
 		std::getline( std::cin, input );
 		if ( !std::cin.good() )

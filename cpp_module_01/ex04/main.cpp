@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:17:07 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:38:12 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ void	printError( std::string cmd, std::string value, std::string error )
 	return;
 }
 
-int		main( int ac, char **av ) {
-
-	if ( ac != 4 ) {
-
+int		main( int ac, char **av )
+{
+	if ( ac != 4 )
+	{
 		printError("Usage", "", "replace input-file string-to-replace new-string");
 		return ( EXIT_FAILURE );
 	}
@@ -43,14 +43,14 @@ int		main( int ac, char **av ) {
 	std::size_t		pos = 0;
 	std::string		substitute = av[3];
 	std::ifstream	inputFile( inputFilename );
-	if ( inputFile.is_open() == false ) {
-
+	if ( inputFile.is_open() == false )
+	{
 		printError("replace", inputFilename, "");
 		return ( EXIT_FAILURE );
 	}
 	std::ofstream	outputFile( outputFilename );
-	if ( outputFile.is_open() == false ) {
-
+	if ( outputFile.is_open() == false )
+	{
 		inputFile.close();
 		printError("replace", "", "");
 		return ( EXIT_FAILURE );
@@ -59,8 +59,8 @@ int		main( int ac, char **av ) {
 
 	buffer << inputFile.rdbuf();
 	haystack = buffer.str();
-	while ( (pos = haystack.find( needle, pos )) != std::string::npos ) {
-
+	while ( (pos = haystack.find( needle, pos )) != std::string::npos )
+	{
 		haystack.erase( pos, needle.size() );
 		haystack.insert ( pos, substitute );
 		pos += substitute.size();

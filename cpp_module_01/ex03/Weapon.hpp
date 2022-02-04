@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:32:47 by pthomas           #+#    #+#             */
-/*   Updated: 2022/01/31 18:18:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/04 14:37:40 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class	Weapon
 
 		std::string		getType( void ) const;
 		void			setType( std::string type );
-
 };
 
 
