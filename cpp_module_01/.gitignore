@@ -4,6 +4,9 @@ zombie
 zombiehorde
 brain
 fight
+replace
+*.replace
+
 
 # Prerequisites
 *.d
