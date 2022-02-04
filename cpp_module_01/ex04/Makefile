@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/04 12:59:43 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/04 14:24:28 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,6 @@ PATH_OBJ	=	obj/
 
 SRC			=	main.cpp
 
-INC			=	
-
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
 #~~~~ Compiler ~~~~#
@@ -44,14 +42,14 @@ RM			=	rm -rf
 
 all :		$(NAME)
 
-$(NAME) :	$(OBJ) $(INC)
+$(NAME) :	$(OBJ)
 			$(CPPC) $(CPPFLAG) $(OBJ) -o $@
 
 re :		fclean all
 
 #~~~~ Compilation Rule ~~~~#
 
-$(PATH_OBJ)%.o :	%.cpp $(INC)
+$(PATH_OBJ)%.o :	%.cpp
 					@mkdir -p $(PATH_OBJ)
 					$(CPPC) $(CPPFLAG) -c $< -o $@
 
