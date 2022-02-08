@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:28:54 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/08 17:01:38 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,31 +24,31 @@ Contact::~Contact( void )
 	return;
 }
 
-void		Contact::setContactInfo( void )
+bool		Contact::setContactInfo( void )
 {
+	Contact		newContact;
+	bool		ret;
+	
+	ret = true;
 	std::cout << std::endl << "Please input new contact informations" << std::endl;
-	std::cout << "First name: ";
-	std::getline ( std::cin, this->_firstName );
-	if ( !std::cin.good() )
-		return;
-	std::cout << "Last name: ";
-	std::getline ( std::cin, this->_lastName );
-	if ( !std::cin.good() )
-		return;
-	std::cout << "Nickname: ";
-	std::getline ( std::cin, this->_nickname );
-	if ( !std::cin.good() )
-		return;
-	std::cout << "Phone number: ";
-	std::getline ( std::cin, this->_phoneNumber );
-	if ( !std::cin.good() )
-		return;
-	std::cout << "Darkest secret: ";
-	std::getline ( std::cin, this->_darkestSecret );
-	if ( !std::cin.good() )
-		return;
-	std::cout << "Contact added to phonebook" << std::endl << std::endl;
-	return;
+	std::cout << "First name: "; std::getline ( std::cin, newContact._firstName );
+	if ( !std::cin.good() || newContact._firstName.empty() )
+		ret = false;
+	std::cout << "Last name: "; std::getline ( std::cin, newContact._lastName );
+	if ( !std::cin.good() || newContact._lastName.empty() )
+		ret = false;
+	std::cout << "Nickname: "; std::getline ( std::cin, newContact._nickname );
+	if ( !std::cin.good() || newContact._nickname.empty() )
+		ret = false;
+	std::cout << "Phone number: "; std::getline ( std::cin, newContact._phoneNumber );
+	if ( !std::cin.good() || newContact._phoneNumber.empty() )
+		ret = false;
+	std::cout << "Darkest secret: "; std::getline ( std::cin, newContact._darkestSecret );
+	if ( !std::cin.good() || newContact._darkestSecret.empty() )
+		ret = false;
+	if ( ret == true )
+		*this = newContact;
+	return ( ret );
 }
 
 void		Contact::printContactInfo( void ) const {
@@ -61,19 +61,19 @@ void		Contact::printContactInfo( void ) const {
 	return;
 }
 
-void		Contact::printSummerizedContactInfo( void ) const {
+void		Contact::printSummerizedContactInfo( size_t width ) const {
 
-	if ( this->_firstName.size() > 10 )
-		std::cout << this->_firstName.substr( 0, 9 ) + "." << "|";
+	if ( this->_firstName.size() > width )
+		std::cout << this->_firstName.substr( 0, width - 1 ) + "." << "|";
 	else
-		std::cout << std::setw(10) << this->_firstName << "|";
-	if ( this->_lastName.size() > 10 )
-		std::cout << this->_lastName.substr( 0, 9 ) + "." << "|";
+		std::cout << std::setw(width) << this->_firstName << "|";
+	if ( this->_lastName.size() > width )
+		std::cout << this->_lastName.substr( 0, width - 1 ) + "." << "|";
 	else
-		std::cout << std::setw(10) << this->_lastName << "|";
-	if ( this->_nickname.size() > 10 )
-		std::cout << this->_nickname.substr( 0, 9 ) + "." << "|";
+		std::cout << std::setw(width) << this->_lastName << "|";
+	if ( this->_nickname.size() > width )
+		std::cout << this->_nickname.substr( 0, width - 1 ) + "." << "|";
 	else
-		std::cout << std::setw(10) << this->_nickname << "|";
+		std::cout << std::setw(width) << this->_nickname << "|";
 	return;
 }

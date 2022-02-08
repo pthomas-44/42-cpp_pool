@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:58:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:35:25 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/08 17:20:37 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,12 +139,12 @@ void	Account::_displayTimestamp( void )
 	std::cout << std::setfill ('0');
 	std::cout << "[";
 	std::cout << timeStruct->tm_year;
-	std::cout << std::setw (2) << timeStruct->tm_mon;
-	std::cout << std::setw (2) << timeStruct->tm_mday;
+	std::cout << std::setw ( 2 ) << timeStruct->tm_mon;
+	std::cout << std::setw ( 2 ) << timeStruct->tm_mday;
 	std::cout << "_";
-	std::cout << std::setw (2) << timeStruct->tm_hour;
-	std::cout << std::setw (2) << timeStruct->tm_min;
-	std::cout << std::setw (2) << timeStruct->tm_sec;
+	std::cout << std::setw ( 2 ) << timeStruct->tm_hour;
+	std::cout << std::setw ( 2 ) << timeStruct->tm_min;
+	std::cout << std::setw ( 2 ) << timeStruct->tm_sec;
 	std::cout << "] ";
 	return;
 }

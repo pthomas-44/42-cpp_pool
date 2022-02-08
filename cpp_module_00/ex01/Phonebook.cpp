@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:11:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:34:15 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/08 17:01:43 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,31 +26,23 @@ Phonebook::~Phonebook( void )
 
 void		Phonebook::addContact( void )
 {
-	std::string	input;
+	size_t		tmp;
+	Contact			newContact;
 
-	if ( this->_nbContacts == 8 )
+	tmp = this->_nbContacts;
+	while (tmp >= MAX_CONTACT)
+		tmp -= MAX_CONTACT;
+	if ( this->_contacts[tmp].setContactInfo() == true )
 	{
-		this->_printPhonebook();
-		std::cout << "Too many contact, input contact index to overwrite (or 0 to cancel): ";
-		std::getline( std::cin, input );
-	    if ( !std::cin.good() )
-	    	return;
-		else if ( input.size() != 1 || input.at(0) < '1' || input.at(0) > '8' )
-		{
-			std::cout << "No contact with this index" << std::endl << std::endl;
-			return;
-		}
-		this->_contacts[input.at(0) - '0' - 1].setContactInfo();
-	}
-	else
-	{
-		this->_contacts[this->_nbContacts].setContactInfo();
+		std::cout << "Contact added to phonebook" << std::endl << std::endl;
 		this->_nbContacts += 1;
 	}
+	else
+		std::cout << "Information fields cannot be empty. Aborting" << std::endl << std::endl;
 	return;
 }
 
-void		Phonebook::searchContact( void )
+void		Phonebook::searchContact( void ) const
 {
 	std::string	input;
 
@@ -65,8 +57,11 @@ void		Phonebook::searchContact( void )
 	if ( !std::cin.good() )
 		return;
 	if ( input.size() != 1 || input.at( 0 ) < '1' \
-		|| input.at( 0 ) > ( char )( this->_nbContacts + '0' ))
+		|| (size_t)(input.at( 0 ) - '0') > this->_nbContacts \
+		|| input.at( 0 ) - '0' > MAX_CONTACT )
+	{
 		std::cout << "No contact with this index" << std::endl << std::endl;
+	}
 	else
 		this->_contacts[input.at(0) - '0' - 1].printContactInfo();
 	return;
@@ -75,13 +70,14 @@ void		Phonebook::searchContact( void )
 void		Phonebook::_printPhonebook( void ) const {
 
 	size_t	i = 1;
+	size_t	width = 10;
 
 	std::cout << std::endl;
-	while ( i <= this->_nbContacts )
+	while ( i <= this->_nbContacts && i <= MAX_CONTACT )
 	{
 		std::cout << "|──────────|──────────|──────────|──────────|" << std::endl;
-		std::cout << "|" << std::setw(10) << i << "|";
-        this->_contacts[i - 1].printSummerizedContactInfo();
+		std::cout << "|" << std::setw( width ) << i << "|";
+		this->_contacts[i - 1].printSummerizedContactInfo( width );
 		std::cout << std::endl;
 		i++;
 	}
