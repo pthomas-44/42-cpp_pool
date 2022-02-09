@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:30 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:34:54 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/08 17:01:03 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ class Contact
 		Contact( void );
 		~Contact( void );
 		
-		void			setContactInfo( void );
+		bool			setContactInfo( void );
 		void			printContactInfo( void ) const ;
-		void			printSummerizedContactInfo( void ) const ;
+		void			printSummerizedContactInfo( size_t width ) const ;
 };
 
 #endif
