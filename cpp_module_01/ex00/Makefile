@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/09 13:31:10 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/09 16:41:10 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,13 +33,10 @@ INC			=	Zombie.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
-#~~~~ Compiler ~~~~#
+#~~~~ Macros ~~~~#
 
 CPPC		=	clang++
 CPPFLAG		=	-Wall -Wextra -Werror
-
-#~~~~ Macros ~~~~#
-
 RM			=	rm -rf
 
 #========================================#

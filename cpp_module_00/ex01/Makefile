@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/08 17:02:09 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/09 16:41:10 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,13 +32,10 @@ INC			=	Contact.hpp Phonebook.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
-#~~~~ Compiler ~~~~#
+#~~~~ Macros ~~~~#
 
 CPPC		=	clang++
 CPPFLAG		=	-Wall -Wextra -Werror
-
-#~~~~ Macros ~~~~#
-
 RM			=	rm -rf
 
 #========================================#
