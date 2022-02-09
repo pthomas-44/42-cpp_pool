@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:11:36 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/08 17:01:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 17:37:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,6 @@
 
 class Phonebook
 {
-	private:
-
-		Contact _contacts[8];
-		size_t	_nbContacts;
-
-		void		_printPhonebook( void ) const ;
-
 	public:
 
 		Phonebook( void );
@@ -33,6 +26,13 @@ class Phonebook
 
 		void		addContact( void );
 		void		searchContact( void ) const ;
+
+	private:
+
+		Contact _contacts[8];
+		size_t	_nbContacts;
+
+		void		_printPhonebook( void ) const ;
 };
 
 #endif

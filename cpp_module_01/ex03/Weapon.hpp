@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:32:47 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 14:40:27 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 17:39:32 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 
 class	Weapon
 {
-	private:
-
-		std::string		_type;
-
 	public:
 
 		Weapon( std::string type );
@@ -29,6 +25,10 @@ class	Weapon
 
 		std::string const	&getType( void ) const;
 		void				setType( std::string type );
+
+	private:
+
+		std::string		_type;
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:04 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 13:33:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 17:54:23 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 class Karen
 {
+	public:
+	
+		Karen( void );
+		~Karen( void );
+
+		void	complain( std::string level );
+
 	private:
 		
 		void			( Karen::*_levelsMessage[4] )( void );
@@ -23,13 +30,5 @@ class Karen
 		void	info( void );
 		void	warning( void );
 		void	error( void );
-
-	public:
-	
-		Karen( void );
-		~Karen( void );
-
-		void	complain( std::string level );
-
 };
 	
