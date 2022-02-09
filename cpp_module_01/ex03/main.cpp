@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:47:20 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/03 16:56:50 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 13:20:07 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,5 @@ int		main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	return 0;
 }

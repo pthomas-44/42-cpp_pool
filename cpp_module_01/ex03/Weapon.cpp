@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:32:48 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:37:35 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 13:18:36 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ Weapon::~Weapon( void )
 	return;
 }
 
-std::string		Weapon::getType( void ) const
+const std::string		&Weapon::getType( void ) const
 {
-	return ( this->_type );
+	const std::string	&typeRef = this->_type;
+
+	return ( typeRef );
 }
 
 

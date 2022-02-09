@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:38:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 13:29:01 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main( int ac, char **av )
 	std::string		outputFilename = inputFilename + ".replace";
 	std::string		haystack;
 	std::string		needle = av[2];
-	std::size_t		pos = 0;
+	size_t			pos = 0;
 	std::string		substitute = av[3];
 	std::ifstream	inputFile( inputFilename );
 	if ( inputFile.is_open() == false )

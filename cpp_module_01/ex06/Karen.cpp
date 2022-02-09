@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:06 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 15:38:35 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 13:29:12 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	Karen::error( void )
 
 void	Karen::complain( std::string level )
 {
-	std::size_t		i = 0;
+	size_t		i = 0;
 
 	while ( level.compare( this->_levels[i] ) && i < 4 )
 		i++;

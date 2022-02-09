@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/01/31 18:11:31 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/09 13:31:10 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,9 @@ OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
 CPPC		=	clang++
 CPPFLAG		=	-Wall -Wextra -Werror
+
+#~~~~ Macros ~~~~#
+
 RM			=	rm -rf
 
 #========================================#
