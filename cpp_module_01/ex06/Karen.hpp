@@ -6,11 +6,12 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:04 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 17:54:33 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:43:36 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
+#include <iostream>
 
 class Karen
 {
@@ -23,7 +24,7 @@ class Karen
 
 	private:
 		
-		std::string 	_levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+		std::string 	_levels[4];
 
 		void	debug( void );
 		void	info( void );

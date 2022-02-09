@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:58:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 18:53:49 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:07:38 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ void	Account::displayAccountsInfos( void )
 	return;
 }
 
-Account::Account( int initial_deposit ) : \
-					_accountIndex( _nbAccounts ), \
-					_amount( initial_deposit ), \
-					_nbDeposits( 0 ), _nbWithdrawals( 0 )
+Account::Account( int initial_deposit ) : _accountIndex( _nbAccounts ),	\
+					_amount( initial_deposit ),	\
+					_nbDeposits( 0 ),			\
+					_nbWithdrawals( 0 )
 {
 	_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";";

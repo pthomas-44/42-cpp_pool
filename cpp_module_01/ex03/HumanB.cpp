@@ -6,14 +6,13 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:53:09 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:37:18 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:26:57 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
-#include <iostream>
 
-HumanB::HumanB( std::string name ) : _name(name), _weapon(nullptr)
+HumanB::HumanB( std::string name ) : _name( name ), _weapon( NULL )
 {
 	return;
 }
@@ -29,7 +28,7 @@ void				HumanB::attack( void ) const
 	return;
 }
 
-void				HumanB::setWeapon( Weapon &weapon )
+void				HumanB::setWeapon( Weapon& weapon )
 {
 	this->_weapon = &weapon;
 	return;

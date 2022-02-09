@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:47:20 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 13:20:07 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:09:31 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"

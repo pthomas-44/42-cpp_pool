@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:04:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 14:28:54 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:04:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include "Zombie.hpp"
 
 Zombie*	newZombie( std::string name );

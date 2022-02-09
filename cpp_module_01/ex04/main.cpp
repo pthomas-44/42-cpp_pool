@@ -6,12 +6,15 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 13:29:01 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:34:58 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include <cerrno>
 #include <iostream>
+#include <istream>
+#include <ostream>
 #include <fstream>
 #include <sstream>
 #include <string.h>
@@ -28,7 +31,29 @@ void	printError( std::string cmd, std::string value, std::string error )
 	return;
 }
 
-int		main( int ac, char **av )
+bool	openFiles(  std::ifstream& inputFile,	\
+					std::ofstream& outputFile,	\
+					std::string inputFilename)
+{
+	std::string		outputFilename = inputFilename + ".replace";
+
+	inputFile.open( inputFilename.c_str() , std::ios_base::in );
+	if ( inputFile.is_open() == false )
+	{
+		printError("replace", inputFilename, "");
+		return ( EXIT_FAILURE );
+	}
+	outputFile.open( outputFilename.c_str() , std::ios_base::out | std::ios_base::trunc );
+	if ( outputFile.is_open() == false )
+	{
+		inputFile.close();
+		printError("replace", "", "");
+		return ( EXIT_FAILURE );
+	}
+	return ( EXIT_SUCCESS );
+}
+
+int		main( int ac, char** av )
 {
 	if ( ac != 4 )
 	{
@@ -36,27 +61,15 @@ int		main( int ac, char **av )
 		return ( EXIT_FAILURE );
 	}
 
-	std::string		inputFilename = av[1];
-	std::string		outputFilename = inputFilename + ".replace";
 	std::string		haystack;
 	std::string		needle = av[2];
 	size_t			pos = 0;
 	std::string		substitute = av[3];
-	std::ifstream	inputFile( inputFilename );
-	if ( inputFile.is_open() == false )
-	{
-		printError("replace", inputFilename, "");
-		return ( EXIT_FAILURE );
-	}
-	std::ofstream	outputFile( outputFilename );
-	if ( outputFile.is_open() == false )
-	{
-		inputFile.close();
-		printError("replace", "", "");
-		return ( EXIT_FAILURE );
-	}
+	std::ifstream	inputFile;
+	std::ofstream	outputFile;
 	std::stringstream	buffer;
 
+	openFiles( inputFile, outputFile, av[1]);
 	buffer << inputFile.rdbuf();
 	haystack = buffer.str();
 	while ( (pos = haystack.find( needle, pos )) != std::string::npos )

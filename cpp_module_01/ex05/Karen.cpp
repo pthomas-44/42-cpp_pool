@@ -6,12 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:06 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 13:33:27 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:40:55 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-#include "iostream"
 
 Karen::Karen( void )
 {
@@ -19,6 +18,10 @@ Karen::Karen( void )
 	this->_levelsMessage[1] = &Karen::info;
 	this->_levelsMessage[2] = &Karen::warning;
 	this->_levelsMessage[3] = &Karen::error;
+	this->_levels[0] = "DEBUG";
+	this->_levels[1] = "INFO";
+	this->_levels[2] = "WARNING";
+	this->_levels[3] = "ERROR";
 	return;
 }
 

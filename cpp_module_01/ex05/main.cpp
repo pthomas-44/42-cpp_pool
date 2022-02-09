@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:04 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/04 15:11:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 19:36:10 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include "Karen.hpp"
 
 int		main( void )
