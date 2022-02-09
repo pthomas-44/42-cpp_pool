@@ -6,12 +6,10 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:11:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/08 17:01:43 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 18:47:09 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
 #include "Phonebook.hpp"
 
 Phonebook::Phonebook( void ) : _nbContacts(0)

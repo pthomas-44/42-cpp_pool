@@ -6,14 +6,14 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 13:58:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/08 17:20:37 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 18:53:49 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Account.hpp"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
+#include "Account.hpp"
 
 int		Account::_nbAccounts = 0;
 int		Account::_totalAmount = 0;

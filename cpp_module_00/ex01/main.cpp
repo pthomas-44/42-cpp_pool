@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:28 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/08 17:01:48 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 18:46:18 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include <iostream>
 #include "Phonebook.hpp"
 

@@ -6,12 +6,10 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 14:54:29 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/08 17:01:38 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/09 18:51:44 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <iomanip>
 #include "Contact.hpp"
 
 Contact::Contact( void )
