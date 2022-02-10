@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/10 10:02:10 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/10 10:19:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	printError( std::string cmd, std::string value, std::string error )
 
 bool	openFiles(  std::ifstream& inputFile,	\
 					std::ofstream& outputFile,	\
-					std::string inputFilename)
+					std::string inputFilename )
 {
 	std::string		outputFilename = inputFilename + ".replace";
 
@@ -69,7 +69,8 @@ int		main( int ac, char** av )
 	std::ofstream	outputFile;
 	std::stringstream	buffer;
 
-	openFiles( inputFile, outputFile, av[1]);
+	if ( openFiles( inputFile, outputFile, av[1]) == EXIT_FAILURE );
+		return ( EXIT_FAILURE );
 	buffer << inputFile.rdbuf();
 	haystack = buffer.str();
 	while ( (pos = haystack.find( needle, pos )) != std::string::npos )
