@@ -6,18 +6,18 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 19:34:58 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/10 10:02:10 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
-#include <cerrno>
+// #include <cerrno>
 #include <iostream>
-#include <istream>
-#include <ostream>
+// #include <istream>
+// #include <ostream>
 #include <fstream>
 #include <sstream>
-#include <string.h>
+// #include <string.h>
 
 void	printError( std::string cmd, std::string value, std::string error )
 {
