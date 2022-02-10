@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:16 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 19:55:01 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/10 17:46:37 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Fixed
 
 		~Fixed( void );
 
-		Fixed &		operator=( Fixed const & rhs );
+		Fixed &		operator=( Fixed const & instance );
 
 		int getRawBits( void ) const;
 	
@@ -34,6 +34,6 @@ class Fixed
 		static int const	_binaryPoint;
 };
 
-std::ostream &		operator<<( std::ostream & o, Fixed const & i );
+std::ostream &			operator<<( std::ostream & outputStream, Fixed const & instance );
 
 #endif /* FIXED_H */

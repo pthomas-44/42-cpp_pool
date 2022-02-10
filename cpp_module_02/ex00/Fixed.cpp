@@ -6,38 +6,48 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 20:04:42 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/10 17:45:04 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+//~~ CONSTRUCTOR
 
 Fixed::Fixed( void ) : _value( 0 )
 {
 	return;
 }
 
-Fixed::Fixed( const Fixed & src ) : _value( src._value )
+Fixed::Fixed( Fixed const & src ) : _value( src._value )
 {
 	return;
 }
+
+//~~ DESTRUCTOR
 
 Fixed::~Fixed( void )
 {
 	return;
 }
 
-Fixed &				Fixed::operator=( Fixed const & rhs )
+//~~ OVERLOAD
+
+Fixed &			Fixed::operator=( Fixed const & instance )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+	if ( this != &instance )
+	{
+		/* code */
+	}
+	return ( *this );
 }
 
-std::ostream &		operator<<( std::ostream & o, Fixed const & i )
+std::ostream &		operator<<( std::ostream & outputStream, Fixed const & instance )
 {
-	//o << "Value = " << i.getValue();
-	return o;
+	outputStream << /* code */;
+	return ( outputStream );
 }
+
+//~~ ACCESSOR
+
+//~~ METHODS
