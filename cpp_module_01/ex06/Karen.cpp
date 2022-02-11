@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:25:06 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/09 19:43:47 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/11 14:33:23 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,19 @@ void	Karen::complain( std::string level )
 	{
 		case 0:
 			this->debug();
+			this->info();
+			this->warning();
+			this->error();
+			break ;
 		case 1:
 			this->info();
+			this->warning();
+			this->error();
+			break ;
 		case 2:
 			this->warning();
+			this->error();
+			break ;
 		case 3:
 			this->error();
 			break ;

@@ -6,18 +6,15 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:46 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/10 10:35:37 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/11 14:26:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
-// #include <cerrno>
 #include <iostream>
-// #include <istream>
-// #include <ostream>
 #include <fstream>
 #include <sstream>
-// #include <string.h>
+#include <string.h>
 
 void	printError( std::string cmd, std::string value, std::string error )
 {
@@ -69,7 +66,7 @@ int		main( int ac, char** av )
 	std::ofstream	outputFile;
 	std::stringstream	buffer;
 
-	if ( openFiles( inputFile, outputFile, av[1]) == EXIT_FAILURE );
+	if ( openFiles( inputFile, outputFile, av[1]) == EXIT_FAILURE )
 		return ( EXIT_FAILURE );
 	buffer << inputFile.rdbuf();
 	haystack = buffer.str();
