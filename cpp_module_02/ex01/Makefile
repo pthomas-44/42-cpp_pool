@@ -16,7 +16,7 @@
 
 #~~~~ Output ~~~~#
 
-NAME		=
+NAME		=	a.out
 
 #~~~~ Paths ~~~~#
 
@@ -24,9 +24,10 @@ PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=
+SRC			=	main.cpp	\
+				Fixed.cpp
 
-INC			=
+INC			=	Fixed.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
