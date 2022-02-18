@@ -6,14 +6,14 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:07 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/18 17:58:56 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/18 19:02:24 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-int main( void ) {
-
+int main( void )
+{
 	{
 		Fixed a(420);
 		Fixed b(69.42f);
