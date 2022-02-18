@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/18 10:37:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/18 17:39:59 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,19 @@ Fixed::~Fixed( void )
 
 //~~ OVERLOAD
 
-Fixed &		Fixed::operator=( Fixed const & instance )
+Fixed &		Fixed::operator=( Fixed const & rhs )
 {
 	std::cout << "Copy assignement operator called" << std::endl;
-	if ( this != &instance )
+	if ( this != &rhs )
 	{
-		this->_value = instance._value;
+		this->_value = rhs._value;
 	}
 	return ( *this );
 }
 
-std::ostream &		operator<<( std::ostream & outputStream, Fixed const & instance )
+std::ostream &		operator<<( std::ostream & outputStream, Fixed const & rhs )
 {
-	outputStream << instance.toFloat();
+	outputStream << rhs.toFloat();
 	return ( outputStream );
 }
 
@@ -88,12 +88,12 @@ void		Fixed::setRawBits( int const raw )
 
 int			Fixed::toInt( void ) const
 {
-	// std::cout << toInt member function called" << std::endl;
+	// std::cout << "toInt member function called" << std::endl;
 	return ( this->_value >> this->_binaryPoint );
 }
 
 float		Fixed::toFloat( void ) const
 {
-	// std::cout << toFloat member function called" << std::endl;
+	// std::cout << "toFloat member function called" << std::endl;
 	return ( ( float )this->_value / ( 1 << this->_binaryPoint ) );
 }

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/14 11:25:54 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/18 17:39:59 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ Fixed::~Fixed( void )
 
 //~~ OVERLOAD
 
-Fixed &		Fixed::operator=( Fixed const & instance )
+Fixed &		Fixed::operator=( Fixed const & rhs )
 {
 	std::cout << "Copy assignement operator called" << std::endl;
-	if ( this != &instance )
+	if ( this != &rhs )
 	{
-		this->_value = instance._value;
+		this->_value = rhs._value;
 	}
 	return ( *this );
 }
