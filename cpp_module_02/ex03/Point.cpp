@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 18:03:04 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/18 18:12:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 12:07:32 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,18 @@ Point::~Point( void )
 
 Point &			Point::operator=( Point const & rhs )
 {
-	if ( this != &rhs )
-	{
-		void;
-	}
+	(void)rhs;
 	return ( *this );
 }
 
 //~~ ACCESSOR
 
-//~~ METHODS
+float			Point::getFloatX( void ) const
+{
+	return ( this->x.toFloat() );
+}
+
+float			Point::getFloatY( void ) const
+{
+	return ( this->y.toFloat() );
+}
