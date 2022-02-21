@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 15:13:07 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 15:42:52 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap( ClapTrap const & src )
 
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << "The Claptrap "<< this->_name << " was trampled by Bullymong" << std::endl;
+	std::cout << "Claptrap "<< this->_name << " was trampled by Bullymong" << std::endl;
 	return;
 }
 
@@ -59,7 +59,7 @@ void			ClapTrap::attack( const std::string & target )
 	if ( this->_energyPoints == 0 || _hitPoints == 0 )
 		return;
 	std::cout << "ClapTrap " << this->_name << " pinches " << target \
-				<< " inflicting " << this->_attackDamage << " points of damage!" << std::endl;
+				<< " dealing " << this->_attackDamage << " damage!" << std::endl;
 	_energyPoints--;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
 	return;
@@ -67,8 +67,8 @@ void			ClapTrap::attack( const std::string & target )
 
 void			ClapTrap::takeDamage( unsigned int amount )
 {
-	std::cout << "A boulder sent by a Bullymong inflicted " << amount \
-				<< " points of damage to Claptrap " << this->_name << "!" << std::endl;
+	std::cout << "Bullymong punched Claptrap " << this->_name << " dealing " \
+				<< amount << " damage!" << std::endl;
 	if ( amount > _hitPoints )
 		_hitPoints = 0;
 	else
@@ -81,7 +81,7 @@ void			ClapTrap::beRepaired( unsigned int amount )
 {
 	if ( _energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << "Claptrap " << _name << " has found a brand new eye and gains " \
+	std::cout << "Claptrap " << _name << " repairs himself for " \
 			<< amount << " health points!" << std::endl;
 	_energyPoints--;
 	if ( amount > 10 - _hitPoints )
