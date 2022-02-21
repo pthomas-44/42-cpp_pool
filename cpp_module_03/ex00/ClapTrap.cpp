@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 15:42:52 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 16:33:58 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap( std::string name ) : _name( name ), \
 ClapTrap::ClapTrap( ClapTrap const & src )
 {
 	*this = src;
-	std::cout << "New Claptrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;
+	std::cout << "New Claptrap " << this->_name << " was cloned by the Clone-Inator!" << std::endl;
 	return;
 }
 
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap( ClapTrap const & src )
 
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << "Claptrap "<< this->_name << " was trampled by Bullymong" << std::endl;
+	std::cout << "Claptrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
