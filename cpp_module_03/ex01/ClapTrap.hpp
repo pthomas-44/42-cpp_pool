@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:08 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 17:14:58 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 17:50:33 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class ClapTrap
 
 		ClapTrap &		operator=( ClapTrap const & rhs );
 
-		void			attack(const std::string& target);
-		void			takeDamage(unsigned int amount);
-		void			beRepaired(unsigned int amount);
+		void			attack( const std::string& target );
+		void			takeDamage( unsigned int amount );
+		void			beRepaired( unsigned int amount );
 
 	protected:
 
@@ -39,10 +39,6 @@ class ClapTrap
 		size_t			_hitPoints;
 		size_t			_energyPoints;
 		size_t			_attackDamage;
-
-	private:
-
-		static size_t const		maxHP;
 };
 
 #endif //~~ CLAPTRAP_H

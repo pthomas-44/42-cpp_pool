@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:45:16 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 17:16:00 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 17:50:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,6 @@ class ScavTrap : public ClapTrap
 	private:
 
 		ScavTrap( void );
-
-		static size_t const		maxHP;
-
 };
 
 #endif //~~ SCAVTRAP_H

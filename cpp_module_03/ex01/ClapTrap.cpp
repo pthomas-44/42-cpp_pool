@@ -6,13 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 17:28:57 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 18:03:35 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-size_t const	ClapTrap::maxHP = 10;
 
 //~~ CONSTRUCTOR
 
@@ -42,7 +40,7 @@ ClapTrap::ClapTrap( ClapTrap const & src )
 
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << "ClapTrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
@@ -66,7 +64,7 @@ void			ClapTrap::attack( const std::string & target )
 {
 	if ( this->_energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << "ClapTrap " << this->_name << " pinches " << target \
+	std::cout << this->_name << " pinches " << target \
 				<< " dealing " << this->_attackDamage << " damage!" << std::endl;
 	_energyPoints--;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
@@ -77,7 +75,7 @@ void			ClapTrap::takeDamage( unsigned int amount )
 {
 	if ( _hitPoints == 0 )
 		return;
-	std::cout << "Bullymong punched ClapTrap " << this->_name << " dealing " \
+	std::cout << "Bullymong punched " << this->_name << " dealing " \
 				<< amount << " damage!" << std::endl;
 	if ( amount > _hitPoints )
 		_hitPoints = 0;
@@ -91,12 +89,10 @@ void			ClapTrap::beRepaired( unsigned int amount )
 {
 	if ( _energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << "ClapTrap " << _name << " repairs himself for " \
+	std::cout << _name << " repairs himself for " \
 			<< amount << " health points!" << std::endl;
 	_energyPoints--;
 	_hitPoints += amount;
-	if ( _hitPoints > maxHP )
-		_hitPoints = maxHP;
 	// std::cout << "HP left: " << _hitPoints << std::endl;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
 	return;

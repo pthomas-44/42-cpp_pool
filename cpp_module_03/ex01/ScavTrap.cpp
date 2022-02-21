@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:45:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 17:29:08 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 18:03:23 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ScavTrap::ScavTrap( ScavTrap const & src )
 
 ScavTrap::~ScavTrap( void )
 {
-	std::cout << "ScavTrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
@@ -65,7 +65,7 @@ void			ScavTrap::attack( const std::string & target )
 {
 	if ( this->_energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << "ScavTrap " << this->_name << " collides violently with " << target \
+	std::cout << this->_name << " collides violently with " << target \
 				<< " dealing " << this->_attackDamage << " damage!" << std::endl;
 	_energyPoints--;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
@@ -74,6 +74,6 @@ void			ScavTrap::attack( const std::string & target )
 
 void			ScavTrap::guardGate( void ) const
 {
-	std::cout << "ScavTrap " << this->_name << " has entered Gate keeper mode!" << std::endl;
+	std::cout << this->_name << " has entered Gate keeper mode!" << std::endl;
 	return;
 }
