@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:08 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 15:12:33 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 16:51:13 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,14 @@ class ClapTrap
 
 	private:
 
+		ClapTrap( void );
+
 		std::string		_name;
 		size_t			_hitPoints;
 		size_t			_energyPoints;
 		size_t			_attackDamage;
+
+		static size_t const		maxHP;
 };
 
 #endif //~~ CLAPTRAP_H

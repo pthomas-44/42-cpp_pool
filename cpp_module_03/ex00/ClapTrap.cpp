@@ -6,13 +6,21 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 16:33:58 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 17:01:27 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+size_t const	ClapTrap::maxHP = 10;
+
 //~~ CONSTRUCTOR
+
+ClapTrap::ClapTrap( void )
+{
+	std::cout << "New Claptrap fresh from the factory!" << std::endl;
+	return;
+}
 
 ClapTrap::ClapTrap( std::string name ) : _name( name ), \
 										_hitPoints( 10 ), \
@@ -67,6 +75,8 @@ void			ClapTrap::attack( const std::string & target )
 
 void			ClapTrap::takeDamage( unsigned int amount )
 {
+	if ( _hitPoints == 0 )
+		return;
 	std::cout << "Bullymong punched Claptrap " << this->_name << " dealing " \
 				<< amount << " damage!" << std::endl;
 	if ( amount > _hitPoints )
@@ -84,10 +94,9 @@ void			ClapTrap::beRepaired( unsigned int amount )
 	std::cout << "Claptrap " << _name << " repairs himself for " \
 			<< amount << " health points!" << std::endl;
 	_energyPoints--;
-	if ( amount > 10 - _hitPoints )
-		_hitPoints = 10;
-	else
-		_hitPoints += amount;
+	_hitPoints += amount;
+	if ( _hitPoints > maxHP )
+		_hitPoints = maxHP;
 	// std::cout << "HP left: " << _hitPoints << std::endl;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
 	return;
