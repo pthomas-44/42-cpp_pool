@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/18 17:58:27 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 15:38:27 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,39 +56,39 @@ Fixed &		Fixed::operator=( Fixed const & rhs )
 
 
 
-bool		Fixed::operator<( Fixed const & rhs )
+bool		Fixed::operator<( Fixed const & rhs ) const
 {
 	return ( this->_value < rhs._value );
 }
 
-bool		Fixed::operator>( Fixed const & rhs )
+bool		Fixed::operator>( Fixed const & rhs ) const
 {
 	return ( this->_value > rhs._value );
 }
 
-bool		Fixed::operator<=( Fixed const & rhs )
+bool		Fixed::operator<=( Fixed const & rhs ) const
 {
 	return ( this->_value <= rhs._value );
 }
 
-bool		Fixed::operator>=( Fixed const & rhs )
+bool		Fixed::operator>=( Fixed const & rhs ) const
 {
 	return ( this->_value >= rhs._value );
 }
 
-bool		Fixed::operator==( Fixed const & rhs )
+bool		Fixed::operator==( Fixed const & rhs ) const
 {
 	return ( this->getRawBits() == rhs.getRawBits() );
 }
 
-bool		Fixed::operator!=( Fixed const & rhs )
+bool		Fixed::operator!=( Fixed const & rhs ) const
 {
 	return ( this->getRawBits() != rhs.getRawBits() );
 }
 
 
 
-Fixed		Fixed::operator+( Fixed const & rhs )
+Fixed		Fixed::operator+( Fixed const & rhs ) const
 {
 	Fixed	result;
 
@@ -96,7 +96,7 @@ Fixed		Fixed::operator+( Fixed const & rhs )
 	return ( result );
 }
 
-Fixed		Fixed::operator-( Fixed const & rhs )
+Fixed		Fixed::operator-( Fixed const & rhs ) const
 {
 	Fixed	result;
 
@@ -104,7 +104,7 @@ Fixed		Fixed::operator-( Fixed const & rhs )
 	return ( result );
 }
 
-Fixed		Fixed::operator*( Fixed const & rhs )
+Fixed		Fixed::operator*( Fixed const & rhs ) const
 {
 	Fixed	result;
 
@@ -112,7 +112,7 @@ Fixed		Fixed::operator*( Fixed const & rhs )
 	return ( result );
 }
 
-Fixed		Fixed::operator/( Fixed const & rhs )
+Fixed		Fixed::operator/( Fixed const & rhs ) const
 {
 	Fixed	result;
 

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:55:16 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/18 17:46:43 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 15:38:50 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,17 @@ class Fixed
 		
 		Fixed &		operator=( Fixed const & rhs );
 
-		bool		operator<( Fixed const & rhs );
-		bool		operator>( Fixed const & rhs );
-		bool		operator<=( Fixed const & rhs );
-		bool		operator>=( Fixed const & rhs );
-		bool		operator==( Fixed const & rhs );
-		bool		operator!=( Fixed const & rhs );
+		bool		operator<( Fixed const & rhs ) const;
+		bool		operator>( Fixed const & rhs ) const;
+		bool		operator<=( Fixed const & rhs ) const;
+		bool		operator>=( Fixed const & rhs ) const;
+		bool		operator==( Fixed const & rhs ) const;
+		bool		operator!=( Fixed const & rhs ) const;
 
-		Fixed		operator+( Fixed const & rhs );
-		Fixed		operator-( Fixed const & rhs );
-		Fixed		operator*( Fixed const & rhs );
-		Fixed		operator/( Fixed const & rhs );
+		Fixed		operator+( Fixed const & rhs ) const;
+		Fixed		operator-( Fixed const & rhs ) const;
+		Fixed		operator*( Fixed const & rhs ) const;
+		Fixed		operator/( Fixed const & rhs ) const;
 
 		Fixed &		operator++( void );
 		Fixed		operator++( int );
