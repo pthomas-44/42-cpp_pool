@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 17:01:27 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/21 17:28:57 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t const	ClapTrap::maxHP = 10;
 
 ClapTrap::ClapTrap( void )
 {
-	std::cout << "New Claptrap fresh from the factory!" << std::endl;
+	std::cout << "New ClapTrap fresh from the factory!" << std::endl;
 	return;
 }
 
@@ -27,14 +27,14 @@ ClapTrap::ClapTrap( std::string name ) : _name( name ), \
 										_energyPoints( 10 ), \
 										_attackDamage( 0 )
 {
-	std::cout << "New Claptrap " << this->_name << " fresh from the factory!" << std::endl;
+	std::cout << "New ClapTrap " << this->_name << " fresh from the factory!" << std::endl;
 	return;
 }
 
 ClapTrap::ClapTrap( ClapTrap const & src )
 {
 	*this = src;
-	std::cout << "New Claptrap " << this->_name << " was cloned by the Clone-Inator!" << std::endl;
+	std::cout << "New ClapTrap " << this->_name << " was cloned by the Clone-Inator!" << std::endl;
 	return;
 }
 
@@ -42,7 +42,7 @@ ClapTrap::ClapTrap( ClapTrap const & src )
 
 ClapTrap::~ClapTrap( void )
 {
-	std::cout << "Claptrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
+	std::cout << "ClapTrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
@@ -77,7 +77,7 @@ void			ClapTrap::takeDamage( unsigned int amount )
 {
 	if ( _hitPoints == 0 )
 		return;
-	std::cout << "Bullymong punched Claptrap " << this->_name << " dealing " \
+	std::cout << "Bullymong punched ClapTrap " << this->_name << " dealing " \
 				<< amount << " damage!" << std::endl;
 	if ( amount > _hitPoints )
 		_hitPoints = 0;
@@ -91,7 +91,7 @@ void			ClapTrap::beRepaired( unsigned int amount )
 {
 	if ( _energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << "Claptrap " << _name << " repairs himself for " \
+	std::cout << "ClapTrap " << _name << " repairs himself for " \
 			<< amount << " health points!" << std::endl;
 	_energyPoints--;
 	_hitPoints += amount;
