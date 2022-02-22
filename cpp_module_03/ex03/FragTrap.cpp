@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:35:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 18:17:57 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/22 16:21:13 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 
 FragTrap::FragTrap( void )
 {
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
 	std::cout << "New FragTrap fresh from the factory!" << std::endl;
 	return;
 }

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:45:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 18:02:56 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/22 16:19:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 
 ScavTrap::ScavTrap( void )
 {
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << "New ScavTrap fresh from the factory!" << std::endl;
 	return;
 }

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:10 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 18:03:10 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/22 16:19:37 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 //~~ CONSTRUCTOR
 
-ClapTrap::ClapTrap( void )
+ClapTrap::ClapTrap( void ) : _hitPoints( 10 ), \
+							_energyPoints( 10 ), \
+							_attackDamage( 0 )
 {
 	std::cout << "New ClapTrap fresh from the factory!" << std::endl;
 	return;

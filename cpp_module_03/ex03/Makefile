@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/21 17:37:47 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/22 16:55:44 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,13 @@ PATH_OBJ	=	obj/
 SRC			=	main.cpp		\
 				ClapTrap.cpp	\
 				ScavTrap.cpp	\
-				FragTrap.cpp
+				FragTrap.cpp	\
+				DiamondTrap.cpp
 
 INC			=	ClapTrap.hpp	\
 				ScavTrap.hpp	\
-				FragTrap.hpp
+				FragTrap.hpp	\
+				DiamondTrap.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 

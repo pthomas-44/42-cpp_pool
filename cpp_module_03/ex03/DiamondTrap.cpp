@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:07:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 18:19:13 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/22 16:51:16 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ DiamondTrap::DiamondTrap( void )
 	return;
 }
 
-DiamondTrap::DiamondTrap( std::string name )
+DiamondTrap::DiamondTrap( std::string name ) : _name( name )
 {
-	_name = name;
 	ClapTrap::_name = _name + "_clap_name";
-	FragTrap::_hitPoints = 100;
-	ScavTrap::_energyPoints = 100;
-	FragTrap::_attackDamage = 30;
+	std::cout << "_name " << _name << std::endl;
+	std::cout << "ClapTrap::_name " << ClapTrap::_name << std::endl;
+	std::cout << "_hitPoints " << _hitPoints << std::endl;
+	std::cout << "_energyPoints " << _energyPoints << std::endl;
+	std::cout << "_attackDamage " << _attackDamage << std::endl;
 	std::cout << "New DiamondTrap " << this->_name << " fresh from the factory!" << std::endl;
 	return;
 }
@@ -50,7 +51,7 @@ DiamondTrap &		DiamondTrap::operator=( DiamondTrap const & rhs )
 {
 	if ( this != &rhs )
 	{
-		this->_name = rhs._name;
+		this->DiamondTrap::_name = rhs.DiamondTrap::_name;
 		this->FragTrap::_hitPoints = rhs.FragTrap::_hitPoints;
 		this->ScavTrap::_energyPoints = rhs.ScavTrap::_energyPoints;
 		this->FragTrap::_attackDamage = rhs.FragTrap::_attackDamage;
@@ -60,8 +61,9 @@ DiamondTrap &		DiamondTrap::operator=( DiamondTrap const & rhs )
 
 //~~ METHODS
 
-void			whoAmI( void ) const
+void			DiamondTrap::whoAmI( void ) const
 {
-	std::cout
+	std::cout << "You may think i am " << ClapTrap::_name << \
+				" but my real name is " << DiamondTrap::_name << "!" << std::endl;
 	return;
 }
