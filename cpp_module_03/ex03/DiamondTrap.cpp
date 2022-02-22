@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:07:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/22 16:56:33 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/22 16:57:32 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,11 @@ DiamondTrap &		DiamondTrap::operator=( DiamondTrap const & rhs )
 {
 	if ( this != &rhs )
 	{
+		this->ClapTrap::_name = rhs.ClapTrap::_name;
 		this->DiamondTrap::_name = rhs.DiamondTrap::_name;
-		this->FragTrap::_hitPoints = rhs.FragTrap::_hitPoints;
-		this->ScavTrap::_energyPoints = rhs.ScavTrap::_energyPoints;
-		this->FragTrap::_attackDamage = rhs.FragTrap::_attackDamage;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
 	}
 	return ( *this );
 }
