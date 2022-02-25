@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 16:57:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 17:58:50 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 18:13:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ int		main( void )
 	delete( Leo );
 	delete( Bob );
 
-	return 0;
+	return ( EXIT_SUCCESS );
 }
