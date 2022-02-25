@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:44:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 17:52:59 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 17:58:06 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Animal::Animal( void )
 Animal::Animal( Animal const & src )
 {
 	std::cout << "Animal copy constructor called" << std::endl;
-	(void)src;
+	this->_type = src._type;
 	return;
 }
 
@@ -39,7 +39,7 @@ Animal::~Animal( void )
 
 Animal &	Animal::operator=( Animal const & rhs )
 {
-	(void)rhs;
+	this->_type = rhs._type;
 	return ( *this );
 }
 
