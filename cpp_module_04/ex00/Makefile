@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/25 17:22:31 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/25 18:11:13 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRC			=	main.cpp		\
 INC			=	Animal.hpp		\
 				Dog.hpp			\
 				Cat.hpp			\
-				WrongAnimal.hpp			\
+				WrongAnimal.hpp	\
 				WrongCat.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
