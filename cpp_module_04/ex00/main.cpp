@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 16:57:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 17:24:04 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 17:53:30 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int		main( void )
 	Animal*			Leo = new Cat();
 	WrongAnimal*	Bob = new WrongCat();
 
+	std::cout << std::endl;
+
 	std::cout << Wut->getType() << " " << std::endl;
 	Wut->makeSound();
 	std::cout << Rex->getType() << " " << std::endl;
@@ -32,6 +34,8 @@ int		main( void )
 	Leo->makeSound();
 	std::cout << Bob->getType() << " " << std::endl;
 	Bob->makeSound();
+	
+	std::cout << std::endl;
 
 	delete( Wut );
 	delete( Rex );

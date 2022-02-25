@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 13:38:48 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 16:53:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 17:51:32 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 
 Cat::Cat( void )
 {
+	std::cout << "Cat constructor called" << std::endl;
 	_type = "Cat";
 	return;
 }
 
 Cat::Cat( Cat const & src )
 {
+	std::cout << "Cat copy constructor called" << std::endl;
 	this->_type = src._type;
 	return;
 }
@@ -30,6 +32,7 @@ Cat::Cat( Cat const & src )
 
 Cat::~Cat( void )
 {
+	std::cout << "Cat destructor called" << std::endl;
 	return;
 }
 

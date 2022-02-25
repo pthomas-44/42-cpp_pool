@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 17:26:25 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 17:26:26 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 17:52:18 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 
 WrongAnimal::WrongAnimal( void )
 {
+	std::cout << "WrongAnimal constructor called" << std::endl;
 	return;
 }
 
 WrongAnimal::WrongAnimal( WrongAnimal const & src )
 {
+	std::cout << "WrongAnimal copy constructor called" << std::endl;
 	(void)src;
 	return;
 }
@@ -29,6 +31,7 @@ WrongAnimal::WrongAnimal( WrongAnimal const & src )
 
 WrongAnimal::~WrongAnimal( void )
 {
+	std::cout << "WrongAnimal destructor called" << std::endl;
 	return;
 }
 
