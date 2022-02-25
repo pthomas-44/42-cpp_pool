@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:07:22 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/22 17:01:29 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/25 16:44:38 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ class DiamondTrap : public ScavTrap, public FragTrap
 
 		using			ScavTrap::attack;
 
-		using			FragTrap::_hitPoints;
-		using			ScavTrap::_energyPoints;
-		using			FragTrap::_attackDamage;
+
 
 	private:
 
