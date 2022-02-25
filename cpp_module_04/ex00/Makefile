@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/23 10:58:18 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/02/25 17:22:31 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,17 +16,26 @@
 
 #~~~~ Output ~~~~#
 
-NAME		=
+NAME		=	a.out
 
 #~~~~ Paths ~~~~#
 
-PATH_OBJ	=
+PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=
+SRC			=	main.cpp		\
+				Animal.cpp		\
+				Dog.cpp			\
+				Cat.cpp			\
+				WrongAnimal.cpp	\
+				WrongCat.cpp
 
-INC			=
+INC			=	Animal.hpp		\
+				Dog.hpp			\
+				Cat.hpp			\
+				WrongAnimal.hpp			\
+				WrongCat.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
