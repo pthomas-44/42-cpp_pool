@@ -1,43 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/25 18:38:26 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 14:28:56 by pthomas          ###   ########lyon.fr   */
+/*   Created: 2022/02/28 13:49:32 by pthomas           #+#    #+#             */
+/*   Updated: 2022/02/28 14:00:15 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_H
-# define AMATERIA_H
+#ifndef CHARACTER_H
+# define CHARACTER_H
 
 # include <iostream>
 # include <string>
-class AMateria;
 # include "ICharacter.hpp"
 
-class AMateria
+class Character : public ICharacter
 {
 	public:
 
-		AMateria( void );
-		AMateria( std::string const & type );
-		AMateria( AMateria const & src );
+		Character( void );
+		Character( std::string name );
+		Character( Character const & src );
 
-		virtual ~AMateria( void );
+		~Character( void );
 
-		AMateria &		operator=( AMateria const & rhs );
+		Character &		operator=( Character const & rhs );
+		
+		std::string const &		getName( void ) const;
 
-		std::string const & getType( void ) const; // Returns the materia type
+		void		equip( AMateria* m );
+		void		unequip( int idx );
+		void		use( int idx, ICharacter& target );
 
-		virtual AMateria*	clone( void ) const = 0;
-		virtual void		use( ICharacter & target );
+	private:
 
-	protected:
-
-		std::string		_type;
+		std::string		_name;
+		AMateria*		_inventory[4];
 };
 
-#endif //~~ AMATERIA_H
+#endif //~~ CHARACTER_H

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 18:38:27 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 19:33:43 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/28 14:29:37 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,19 @@
 
 AMateria::AMateria( void )
 {
+	std::cout << "AMateria default constructor called" << std::endl;
 	return;
 }
 
-AMateria( std::string const & type ) : _type( type )
+AMateria::AMateria( std::string const & type ) : _type( type )
 {
+	std::cout << "AMateria constructor called" << std::endl;
 	return;
 }
 
-AMateria::AMateria( AMateria const & src )
+AMateria::AMateria( AMateria const & src ) : _type( src._type )
 {
+	std::cout << "AMateria copy constructor called" << std::endl;
 	return;
 }
 
@@ -33,16 +36,29 @@ AMateria::AMateria( AMateria const & src )
 
 AMateria::~AMateria( void )
 {
+	std::cout << "AMateria destructor called" << std::endl;
 	return;
 }
 
 //~~ OVERLOAD
 
-AMateria &			AMateria::operator=( AMateria const & rhs )
+AMateria &		AMateria::operator=( AMateria const & rhs )
 {
+	this->_type = rhs._type;
 	return ( *this );
 }
 
 //~~ ACCESSOR
 
+std::string const &		AMateria::getType( void ) const
+{
+	return ( _type );
+}
+
 //~~ METHODS
+
+void		AMateria::use( ICharacter& target )
+{
+	(void)target;
+	return;
+}
