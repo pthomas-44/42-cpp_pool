@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:35:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/21 18:02:45 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/28 13:34:58 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ FragTrap::FragTrap( std::string name )
 	return;
 }
 
-FragTrap::FragTrap( FragTrap const & src )
+FragTrap::FragTrap( FragTrap const & src ) : ClapTrap( src )
 {
 	*this = src;
 	std::cout << "New FragTrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;

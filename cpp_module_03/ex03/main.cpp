@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/22 15:52:09 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/28 13:28:45 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include <iostream>
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"

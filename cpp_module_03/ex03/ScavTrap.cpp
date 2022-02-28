@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:45:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/22 16:19:56 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/28 13:32:47 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap( std::string name )
 	return;
 }
 
-ScavTrap::ScavTrap( ScavTrap const & src )
+ScavTrap::ScavTrap( ScavTrap const & src ) : ClapTrap( src )
 {
 	*this = src;
 	std::cout << "New ScavTrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;

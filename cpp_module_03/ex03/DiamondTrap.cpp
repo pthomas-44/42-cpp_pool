@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 18:07:24 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 16:52:14 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/02/28 13:34:01 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ DiamondTrap::DiamondTrap( std::string name ) : _name( name )
 	return;
 }
 
-DiamondTrap::DiamondTrap( DiamondTrap const & src )
+DiamondTrap::DiamondTrap( DiamondTrap const & src ) : ClapTrap( src ), ScavTrap( src ), FragTrap( src )
 {
 	*this = src;
 	std::cout << "New DiamondTrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;
