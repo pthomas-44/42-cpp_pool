@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 17:35:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 13:34:58 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:21:41 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,17 @@ FragTrap::FragTrap( void )
 FragTrap::FragTrap( std::string name )
 {
 	_name = name;
+	std::cout << "New FragTrap " << _name << " fresh from the factory!" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "New FragTrap " << this->_name << " fresh from the factory!" << std::endl;
 	return;
 }
 
 FragTrap::FragTrap( FragTrap const & src ) : ClapTrap( src )
 {
 	*this = src;
-	std::cout << "New FragTrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;
+	std::cout << "New FragTrap " << _name << " was cloned by the Clone-Inator" << std::endl;
 	return;
 }
 
@@ -41,7 +41,7 @@ FragTrap::FragTrap( FragTrap const & src ) : ClapTrap( src )
 
 FragTrap::~FragTrap( void )
 {
-	std::cout << "FragTrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
+	std::cout << "FragTrap "<< _name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
@@ -49,13 +49,10 @@ FragTrap::~FragTrap( void )
 
 FragTrap &		FragTrap::operator=( FragTrap const & rhs )
 {
-	if ( this != &rhs )
-	{
-		this->_name = rhs._name;
-		this->_hitPoints = rhs._hitPoints;
-		this->_energyPoints = rhs._energyPoints;
-		this->_attackDamage = rhs._attackDamage;
-	}
+	_name = rhs._name;
+	_hitPoints = rhs._hitPoints;
+	_energyPoints = rhs._energyPoints;
+	_attackDamage = rhs._attackDamage;
 	return ( *this );
 }
 
@@ -63,10 +60,10 @@ FragTrap &		FragTrap::operator=( FragTrap const & rhs )
 
 void			FragTrap::attack( const std::string & target )
 {
-	if ( this->_energyPoints == 0 || _hitPoints == 0 )
+	if ( _energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << this->_name << " throw bomb to " << target \
-				<< " dealing " << this->_attackDamage << " damage!" << std::endl;
+	std::cout << _name << " throw bomb to " << target \
+				<< " dealing " << _attackDamage << " damage!" << std::endl;
 	_energyPoints--;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
 	return;
@@ -74,6 +71,7 @@ void			FragTrap::attack( const std::string & target )
 
 void			FragTrap::highFivesGuys( void ) const
 {
-	std::cout << this->_name << " high fives everyone in the room!" << std::endl;
+	if ( _hitPoints > 0 )
+		std::cout << _name << " high fives everyone in the room!" << std::endl;
 	return;
 }

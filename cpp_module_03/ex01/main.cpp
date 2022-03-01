@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 13:35:25 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:20:39 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,7 @@
 
 int		main( void )
 {
-	ClapTrap	clap( "ClapBoy" );
 	ScavTrap	scav( "ScavBoy" );
-
-	std::cout << std::endl;
-
-	clap.attack( "BullyMong" );
-	clap.takeDamage( 5 );
-	clap.beRepaired( 2 );
 
 	std::cout << std::endl;
 

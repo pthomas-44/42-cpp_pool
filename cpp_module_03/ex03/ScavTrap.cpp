@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:45:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 13:32:47 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:22:33 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 
 ScavTrap::ScavTrap( void )
 {
-	_hitPoints = 100;
-	_energyPoints = 50;
-	_attackDamage = 20;
 	std::cout << "New ScavTrap fresh from the factory!" << std::endl;
 	return;
 }
@@ -26,17 +23,20 @@ ScavTrap::ScavTrap( void )
 ScavTrap::ScavTrap( std::string name )
 {
 	_name = name;
+	std::cout << "New ScavTrap " << _name << " fresh from the factory!" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "New ScavTrap " << this->_name << " fresh from the factory!" << std::endl;
 	return;
 }
 
 ScavTrap::ScavTrap( ScavTrap const & src ) : ClapTrap( src )
 {
-	*this = src;
-	std::cout << "New ScavTrap " << this->_name << " was cloned by the Clone-Inator" << std::endl;
+	_name = src._name;
+	std::cout << "New ScavTrap " << _name << " was cloned by the Clone-Inator" << std::endl;
+	_hitPoints = src._hitPoints;
+	_energyPoints = src._energyPoints;
+	_attackDamage = src._attackDamage;
 	return;
 }
 
@@ -44,7 +44,7 @@ ScavTrap::ScavTrap( ScavTrap const & src ) : ClapTrap( src )
 
 ScavTrap::~ScavTrap( void )
 {
-	std::cout << "ScavTrap "<< this->_name << " was trampled by Bullymong!" << std::endl;
+	std::cout << "ScavTrap " << _name << " was trampled by Bullymong!" << std::endl;
 	return;
 }
 
@@ -52,13 +52,10 @@ ScavTrap::~ScavTrap( void )
 
 ScavTrap &		ScavTrap::operator=( ScavTrap const & rhs )
 {
-	if ( this != &rhs )
-	{
-		this->_name = rhs._name;
-		this->_hitPoints = rhs._hitPoints;
-		this->_energyPoints = rhs._energyPoints;
-		this->_attackDamage = rhs._attackDamage;
-	}
+	_name = rhs._name;
+	_hitPoints = rhs._hitPoints;
+	_energyPoints = rhs._energyPoints;
+	_attackDamage = rhs._attackDamage;
 	return ( *this );
 }
 
@@ -66,10 +63,10 @@ ScavTrap &		ScavTrap::operator=( ScavTrap const & rhs )
 
 void			ScavTrap::attack( const std::string & target )
 {
-	if ( this->_energyPoints == 0 || _hitPoints == 0 )
+	if ( _energyPoints == 0 || _hitPoints == 0 )
 		return;
-	std::cout << this->_name << " collides violently with " << target \
-				<< " dealing " << this->_attackDamage << " damage!" << std::endl;
+	std::cout << _name << " collides violently with " << target \
+				<< " dealing " << _attackDamage << " damage!" << std::endl;
 	_energyPoints--;
 	// std::cout << "EP left: " << _energyPoints << std::endl;
 	return;
@@ -77,6 +74,7 @@ void			ScavTrap::attack( const std::string & target )
 
 void			ScavTrap::guardGate( void ) const
 {
-	std::cout << this->_name << " has entered Gate keeper mode!" << std::endl;
+	if ( _hitPoints > 0 )
+		std::cout << _name << " has entered Gate keeper mode!" << std::endl;
 	return;
 }

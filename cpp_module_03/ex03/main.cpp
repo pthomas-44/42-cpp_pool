@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:11:14 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 13:28:45 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:23:19 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,7 @@
 
 int		main( void )
 {
-	ClapTrap	clap( "ClapBoy" );
-	ScavTrap	scav( "ScavBoy" );
-	FragTrap	frag( "FragBoy" );
 	DiamondTrap	diamond( "DiamondBoy" );
-
-	std::cout << std::endl;
-
-	clap.attack( "BullyMong" );
-	clap.takeDamage( 5 );
-	clap.beRepaired( 2 );
-
-	std::cout << std::endl;
-
-	scav.attack( "BullyMong" );
-	scav.takeDamage( 5 );
-	scav.beRepaired( 2 );
-	scav.guardGate();
-
-	std::cout << std::endl;
-
-	frag.attack( "BullyMong" );
-	frag.takeDamage( 5 );
-	frag.beRepaired( 2 );
-	frag.highFivesGuys();
 
 	std::cout << std::endl;
 
