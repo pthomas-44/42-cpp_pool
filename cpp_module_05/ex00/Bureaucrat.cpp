@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 11:24:40 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 11:57:50 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 13:01:48 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,12 @@ Bureaucrat::Bureaucrat( std::string const name, size_t grade ) : _name( name ), 
 	return;
 }
 
-Bureaucrat::Bureaucrat( Bureaucrat const & src ) : _name( src._name )
+Bureaucrat::Bureaucrat( Bureaucrat const & src ) : _name( src._name ), _grade( src._grade )
 {
-	_grade = src._grade;
+	if ( _grade > 150 )
+		throw ( Bureaucrat::GradeTooLowException() );
+	else if ( _grade < 1 )
+		throw ( Bureaucrat::GradeTooHighException() );
 	return;
 }
 
@@ -52,13 +55,13 @@ Bureaucrat &			Bureaucrat::operator=( Bureaucrat const & rhs )
 
 std::ostream &		operator<<( std::ostream & outputStream, Bureaucrat const & rhs )
 {
-	outputStream << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << "." << std::endl;
+	outputStream << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << ".";
 	return ( outputStream );
 }
 
 //~~ ACCESSOR
 
-std::string const	Bureaucrat::getName( void ) const
+std::string const &	Bureaucrat::getName( void ) const
 {
 	return ( _name );
 }
@@ -90,10 +93,10 @@ void		Bureaucrat::demote( void )
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ( "Error: Bureaucrat grade is too high ( max = 1 )." );
+	return ( "Grade too high." );
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ( "Error: Bureaucrat grade is too low ( min = 150 )." );
+	return ( "Grade too low." );
 }

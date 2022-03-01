@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 11:24:42 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 12:07:34 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 12:56:15 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Bureaucrat
 
 		Bureaucrat &		operator=( Bureaucrat const & rhs );
 
-		std::string const	getName( void ) const;
+		std::string const &	getName( void ) const;
 		size_t				getGrade( void ) const;
 
 		void				promote( void );
