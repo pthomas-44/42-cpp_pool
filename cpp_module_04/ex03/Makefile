@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/02/28 13:53:22 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/03/01 10:06:46 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,17 +24,20 @@ PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=	main.cpp		\
-				AMateria.cpp	\
-				Ice.cpp			\
-				Cure.cpp		\
-				Character.cpp
+SRC			=	main.cpp			\
+				AMateria.cpp		\
+				Ice.cpp				\
+				Cure.cpp			\
+				Character.cpp		\
+				MateriaSource.cpp
 
-INC			=	AMateria.hpp	\
-				Ice.hpp			\
-				Cure.hpp		\
-				ICharacter.hpp	\
-				Character.hpp
+INC			=	AMateria.hpp		\
+				Ice.hpp				\
+				Cure.hpp			\
+				ICharacter.hpp		\
+				Character.hpp		\
+				IMateriaSource.hpp	\
+				MateriaSource.hpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 

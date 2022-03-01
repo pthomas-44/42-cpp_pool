@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 12:45:57 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 13:37:34 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 09:51:04 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,8 @@ class Ice : public AMateria
 		Ice &		operator=( Ice const & rhs );
 
 		AMateria*	clone( void ) const;
-		void		use( ICharacter& target );
+		void		use( ICharacter& target ) const;
 
-
-	private:
 };
 
 #endif //~~ ICE_H

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 12:45:59 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 14:31:01 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 09:51:41 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Ice::Ice( void ) : AMateria( "ice" )
 Ice::Ice( Ice const & src ) : AMateria( src )
 {
 	std::cout << "Ice copy constructor called" << std::endl;
-	this->_type = src._type;
 	return;
 }
 
@@ -50,7 +49,7 @@ AMateria*	Ice::clone( void ) const
 	return ( new Ice( *this ) );
 }
 
-void		Ice::use( ICharacter& target )
+void		Ice::use( ICharacter& target ) const
 {
 	std::cout << "Ice: '* shoots an ice bolt at " << target.getName() << " *'" << std::endl;
 	return;

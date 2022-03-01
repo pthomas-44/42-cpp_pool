@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.cpp                                      :+:      :+:    :+:   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/28 13:52:56 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 09:53:10 by pthomas          ###   ########lyon.fr   */
+/*   Created: 2022/02/28 14:47:01 by pthomas           #+#    #+#             */
+/*   Updated: 2022/03/01 10:21:07 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.hpp"
+#include "MateriaSource.hpp"
 
 //~~ CONSTRUCTOR
 
-Character::Character( void )
+MateriaSource::MateriaSource( void )
 {
-	std::cout << "Character default constructor called" << std::endl;
 	return;
 }
 
-Character::Character( std::string name ) : _name( name )
+MateriaSource::MateriaSource( MateriaSource const & src )
 {
-	std::cout << "Character constructor called" << std::endl;
-	return;
-}
-
-Character::Character( Character const & src ) : _name( src._name )
-{
-	std::cout << "Character copy constructor called" << std::endl;
 	for ( size_t idx = 0; idx < 4; idx++ )
 	{
-		if (  src._inventory[idx] != NULL)
+		if ( src._inventory[idx] != NULL )
 			_inventory[idx] = src._inventory[idx]->clone();
 	}
 	return;
@@ -39,9 +31,8 @@ Character::Character( Character const & src ) : _name( src._name )
 
 //~~ DESTRUCTOR
 
-Character::~Character( void )
+MateriaSource::~MateriaSource( void )
 {
-	std::cout << "Character destructor called" << std::endl;
 	for ( size_t idx = 0; idx < 4; idx++ )
 	{
 		if ( _inventory[idx] != NULL )
@@ -52,9 +43,8 @@ Character::~Character( void )
 
 //~~ OVERLOAD
 
-Character &			Character::operator=( Character const & rhs )
+MateriaSource &		MateriaSource::operator=( MateriaSource const & rhs )
 {
-	this->_name = rhs._name;
 	for ( size_t idx = 0; idx < 4; idx++ )
 	{
 		if ( _inventory[idx] != NULL )
@@ -64,16 +54,9 @@ Character &			Character::operator=( Character const & rhs )
 	return ( *this );
 }
 
-//~~ ACCESSOR
-
-std::string const & Character::getName() const
-{
-	return ( _name );
-}
-
 //~~ METHODS
 
-void		Character::equip( AMateria* m )
+void		MateriaSource::learnMateria( AMateria* m )
 {
 	for ( size_t idx = 0; idx < 4; idx++ )
 	{
@@ -86,15 +69,13 @@ void		Character::equip( AMateria* m )
 	return;
 }
 
-void		Character::unequip ( int idx )
+AMateria*	MateriaSource::createMateria( std::string const & type )
 {
-	_inventory[idx] = NULL;
-	return;
+	for ( size_t idx = 0; idx < 4; idx++ )
+	{
+		if ( _inventory[idx] != NULL && !_inventory[idx]->getType().compare( type ) )
+			return ( _inventory[idx]->clone() );
+	}
+	return ( NULL );
 }
 
-void		Character::use( int idx, ICharacter& target )
-{
-	if ( _inventory[idx] != NULL )
-		_inventory[idx]->use( target );
-	return;
-}

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 18:38:27 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 14:29:37 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 09:49:59 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ std::string const &		AMateria::getType( void ) const
 
 //~~ METHODS
 
-void		AMateria::use( ICharacter& target )
+void		AMateria::use( ICharacter& target ) const
 {
 	(void)target;
 	return;

@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 12:56:59 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/28 14:30:56 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 09:51:29 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ Cure::Cure( void ) : AMateria( "cure" )
 Cure::Cure( Cure const & src ) : AMateria( src )
 {
 	std::cout << "Cure copy constructor called" << std::endl;
-	this->_type = src._type;
 	return;
 }
 
@@ -50,7 +49,7 @@ AMateria*	Cure::clone( void ) const
 	return ( new Cure( *this ) );
 }
 
-void		Cure::use( ICharacter& target )
+void		Cure::use( ICharacter& target ) const
 {
 	std::cout << "Cure: '* heals " << target.getName() << "'s wounds" << std::endl;
 	return;
