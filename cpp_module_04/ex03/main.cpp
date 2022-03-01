@@ -6,16 +6,16 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 18:36:54 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 10:58:49 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:48:06 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
 #include <iostream>
-# include "Ice.hpp"
-# include "Cure.hpp"
-# include "Character.hpp"
-# include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
+#include "MateriaSource.hpp"
 
 int main()
 {

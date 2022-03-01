@@ -6,10 +6,11 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 16:57:03 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 18:16:02 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:46:18 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include <iostream>
 #include "Animal.hpp"
 #include "Dog.hpp"

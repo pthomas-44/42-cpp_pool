@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 13:38:51 by pthomas           #+#    #+#             */
-/*   Updated: 2022/02/25 18:10:27 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 17:27:49 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 //~~ CONSTRUCTOR
 
-Dog::Dog( void )
+Dog::Dog( void ) : Animal()
 {
 	std::cout << "Dog constructor called" << std::endl;
 	_type = "Dog";
@@ -22,7 +22,7 @@ Dog::Dog( void )
 	return;
 }
 
-Dog::Dog( Dog const & src )
+Dog::Dog( Dog const & src ) : Animal( src )
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	this->_type = src._type;
