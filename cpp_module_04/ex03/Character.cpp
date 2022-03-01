@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:52:56 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 09:53:10 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 10:57:19 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,9 +80,10 @@ void		Character::equip( AMateria* m )
 		if ( _inventory[idx] == NULL )
 		{
 			_inventory[idx] = m;
-			break;
+			return;
 		}
 	}
+	delete( m );
 	return;
 }
 
