@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 12:11:33 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 12:54:26 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 14:17:31 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Form
 		size_t const &		getWGrade( void ) const;
 		size_t const &		getXGrade( void ) const;
 
-		void				beSigned( Bureaucrat bureaucrat );
+		void				beSigned( Bureaucrat & bureaucrat );
 
 		class GradeTooHighException : public std::exception
 		{

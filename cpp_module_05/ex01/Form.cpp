@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 12:11:25 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 13:03:47 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/01 14:30:19 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ Form::~Form( void )
 
 Form &			Form::operator=( Form const & rhs )
 {
-	_state = rhs._state;
+	(void)rhs;
 	return ( *this );
 }
 
@@ -89,7 +89,7 @@ size_t const &		Form::getXGrade( void ) const
 
 //~~ METHODS
 
-void	Form::beSigned( Bureaucrat bureaucrat )
+void	Form::beSigned( Bureaucrat & bureaucrat )
 {
 	if ( bureaucrat.getGrade() > _wGrade )
 		throw ( Bureaucrat::GradeTooLowException() );
