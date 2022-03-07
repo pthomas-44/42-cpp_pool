@@ -6,34 +6,13 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:53:33 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 15:59:42 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/07 17:35:00 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
 #include <iostream>
-
-template< typename T >
-void	swap( T & a, T & b )
-{
-	T	tmp;
-
-	tmp = a;
-	a = b;
-	b = tmp;
-}
-
-template< typename T >
-T		min( T const & a, T const & b )
-{
-	return ( ( a > b ) ? b : a );
-}
-
-template< typename T >
-T		max( T const & a, T const & b )
-{
-	return ( ( a > b ) ? a : b );
-}
+#include "whatever.hpp"
 
 int		main( void )
 {
