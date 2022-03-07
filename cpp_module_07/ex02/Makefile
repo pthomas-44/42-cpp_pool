@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/03/07 14:58:49 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/03/07 17:07:58 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 #~~~~ Output ~~~~#
 
-NAME		=
+NAME		=	a.out
 
 #~~~~ Paths ~~~~#
 
@@ -24,9 +24,10 @@ PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=
+SRC			=	main.cpp
 
-INC			=
+INC			=	Array.hpp	\
+				Array.tpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
