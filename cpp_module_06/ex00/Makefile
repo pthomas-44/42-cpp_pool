@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/03/01 16:19:13 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/03/07 12:45:26 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 #~~~~ Output ~~~~#
 
-NAME		=
+NAME		=	convert
 
 #~~~~ Paths ~~~~#
 
@@ -24,9 +24,7 @@ PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=
-
-INC			=
+SRC			=	main.cpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
@@ -44,14 +42,14 @@ RM			=	rm -rf
 
 all :		$(NAME)
 
-$(NAME) :	$(OBJ) $(INC)
+$(NAME) :	$(OBJ)
 			$(CPPC) $(CPPFLAG) $(OBJ) -o $@
 
 re :		fclean all
 
 #~~~~ Compilation Rule ~~~~#
 
-$(PATH_OBJ)%.o :	%.cpp $(INC)
+$(PATH_OBJ)%.o :	%.cpp
 					@mkdir -p $(PATH_OBJ)
 					$(CPPC) $(CPPFLAG) -c $< -o $@
 
