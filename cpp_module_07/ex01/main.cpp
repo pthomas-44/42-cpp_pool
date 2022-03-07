@@ -6,27 +6,13 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:53:33 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 16:26:56 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/07 17:36:20 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
 #include <iostream>
 #include "iter.hpp"
-
-template< typename T >
-void	plusFour( T & value )
-{
-	value += 4 ;
-	return;
-}
-
-template< typename T >
-void	print( T & value )
-{
-	std::cout << value;
-	return;
-}
 
 int		main( void )
 {
