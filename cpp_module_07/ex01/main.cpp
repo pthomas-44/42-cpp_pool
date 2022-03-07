@@ -6,20 +6,13 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:53:33 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 16:24:12 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/07 16:26:56 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cstdlib>
 #include <iostream>
-
-template< typename T >
-void	iter( T *array, size_t size, void (*f)( T & elem )  )
-{
-	for ( size_t i = 0; i < size; i++ )
-        f( array[i] );
-	return;
-}
+#include "iter.hpp"
 
 template< typename T >
 void	plusFour( T & value )
