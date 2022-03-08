@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:39:02 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 17:11:49 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/08 13:01:22 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,15 @@ Array<T> &		Array<T>::operator=( Array<T> const & rhs )
 }
 
 template <typename T>
-T &		Array<T>::operator[]( unsigned int i ) const
+T &		Array<T>::operator[]( unsigned int i )
+{
+	if ( i >= _size )
+		throw( std::exception() );
+	return ( _array[i] );
+}
+
+template <typename T>
+const T &	Array<T>::operator[]( unsigned int i ) const
 {
 	if ( i >= _size )
 		throw( std::exception() );

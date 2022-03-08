@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:39:08 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 17:09:19 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/08 13:01:14 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Array
 		~Array<T>( void );
 
 		Array &		operator=( Array<T> const & rhs );
-		T &			operator[]( unsigned int i ) const;
+		T &			operator[]( unsigned int i );
+		const T &	operator[]( unsigned int i ) const;
 
 	private:
 
