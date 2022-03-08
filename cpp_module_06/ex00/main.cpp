@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 12:32:26 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 13:51:59 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/08 12:36:00 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		main( int ac, char** av )
 		std::cout << "float: nanf" << std::endl;
 	else if ( d > FLT_MAX )
 		std::cout << "float: inff" << std::endl;
-	else if ( d < FLT_MIN )
+	else if ( d < -FLT_MAX )
 		std::cout << "float: -inff" << std::endl;
 	else
 		std::cout << "float: " << f << "f" << std::endl;
