@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:39:08 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/15 09:59:58 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/15 10:14:01 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ class Array
 {
 	public:
 
-		Array<T>( void );
-		Array<T>( unsigned int size );
-		Array<T>( Array const & src );
+		Array( void );
+		Array( unsigned int size );
+		Array( Array const & src );
 
-		~Array<T>( void );
+		~Array( void );
 
-		Array<T> &		operator=( Array<T> const & rhs );
+		Array &		operator=( Array const & rhs );
 		T &				operator[]( unsigned int i );
 		const T &		operator[]( unsigned int i ) const;
 
