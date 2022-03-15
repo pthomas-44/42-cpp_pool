@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:52:56 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 10:57:19 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/15 11:18:38 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@
 Character::Character( void )
 {
 	std::cout << "Character default constructor called" << std::endl;
+	for ( size_t idx = 0; idx < 4; idx++ )
+		_inventory[idx] = NULL;
 	return;
 }
 
 Character::Character( std::string name ) : _name( name )
 {
 	std::cout << "Character constructor called" << std::endl;
+	for ( size_t idx = 0; idx < 4; idx++ )
+		_inventory[idx] = NULL;
 	return;
 }
 

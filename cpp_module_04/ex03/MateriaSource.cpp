@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 14:47:01 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/01 10:21:07 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/15 11:18:54 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 MateriaSource::MateriaSource( void )
 {
+	for ( size_t idx = 0; idx < 4; idx++ )
+		_inventory[idx] = NULL;
 	return;
 }
 
