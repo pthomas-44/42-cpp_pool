@@ -2,6 +2,7 @@
 .vscode
 easyfind
 span
+mutate
 
 # Prerequisites
 *.d
