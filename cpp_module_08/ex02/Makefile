@@ -6,7 +6,7 @@
 #    By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/12 15:24:38 by pthomas           #+#    #+#              #
-#    Updated: 2022/03/07 17:28:41 by pthomas          ###   ########lyon.fr    #
+#    Updated: 2022/03/15 09:34:27 by pthomas          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@
 
 #~~~~ Output ~~~~#
 
-NAME		=
+NAME		=	mutate
 
 #~~~~ Paths ~~~~#
 
@@ -24,9 +24,10 @@ PATH_OBJ	=	obj/
 
 #~~~~ Files ~~~~#
 
-SRC			=
+SRC			=	main.cpp
 
-INC			=
+INC			=	MutantStack.hpp	\
+				MutantStack.tpp
 
 OBJ			=	$(addprefix $(PATH_OBJ), $(SRC:.cpp=.o))
 
