@@ -4,7 +4,7 @@
 
 #define MAX_VAL 750
 
-int		main2( void )
+int		main( void )
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
@@ -52,11 +52,4 @@ int		main2( void )
     }
     delete [] mirror;
     return 0;
-}
-
-int		main( void )
-{
-	main2();
-	// while( 1 ); // Infinite loop to test leaks
-	return ( EXIT_SUCCESS );
 }
