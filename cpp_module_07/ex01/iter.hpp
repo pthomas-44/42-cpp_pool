@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:26:12 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/07 17:36:24 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/17 18:33:17 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ITER_H
 
 template< typename T >
-void	iter( T *array, size_t size, void (*f)( T & elem )  )
+void	iter( T *array, size_t size, void (*f)( T & elem ) )
 {
 	for ( size_t i = 0; i < size; i++ )
         f( array[i] );
@@ -29,7 +29,7 @@ void	plusFour( T & value )
 }
 
 template< typename T >
-void	print( T & value )
+void	display( T & value )
 {
 	std::cout << value;
 	return;

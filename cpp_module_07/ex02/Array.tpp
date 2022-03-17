@@ -6,7 +6,7 @@
 /*   By: pthomas <pthomas@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:39:02 by pthomas           #+#    #+#             */
-/*   Updated: 2022/03/15 10:15:06 by pthomas          ###   ########lyon.fr   */
+/*   Updated: 2022/03/17 18:36:17 by pthomas          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,13 @@ const T &	Array<T>::operator[]( unsigned int i ) const
 	return ( _array[i] );
 }
 
-//~~ ACCESSOR
-
 //~~ METHODS
+
+template <typename T>
+unsigned int	Array<T>::size( void ) const
+{
+	return ( _size );
+}
+
 
 #endif //~~ ARRAY_T
